@@ -3,51 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<<<<<<< HEAD:pages/index.html
   <title>Jojo's Fashion</title>
 <link rel="stylesheet" href="../styles.css" />
+=======
+  <title>Fabricode</title>
+  <link rel="stylesheet" href="styles.css" />
+>>>>>>> 21c1fc8 (Update index.html with the required HTML structure):index.html
 </head>
 <body>
 
-  <!-- Header / Nav -->
+  <!-- Header with logo and main navigation links -->
   <header class="header">
     <div class="container">
+<<<<<<< HEAD:pages/index.html
       <div class="logo">< FABRI-C-ODE /></div>
+=======
+      <div class="logo">&lt;FABRICODE&gt;</div>
+>>>>>>> 21c1fc8 (Update index.html with the required HTML structure):index.html
       <nav class="nav">
         <a href="#">Home</a>
         <a href="#">Shop</a>
         <a href="#">Collections</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-        <a href="#" class="cart-icon">🛒</a>
+        <a href="#" id="open-login">Login</a> <!-- Opens login modal -->
+        <a href="#" id="open-signup">Sign Up</a> <!-- Opens signup modal -->
+        <a href="#" class="cart-icon" aria-label="Cart">🛒</a> <!-- Shopping cart icon -->
       </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero section to grab attention -->
   <section class="hero">
     <div class="hero-content">
-      <h1>Slay Every Fit</h1>
-      <p>Unleash your drip with the latest trends</p>
-      <a href="#" class="btn">Shop Now</a>
+      <h1 style="color: #8a6f78;">Slay Every Fit</h1>
+      <p style="color: #444;">Unleash your drip with the latest trends from Fabricode</p>
+      <a href="#" class="btn">Shop Now</a> <!-- Call to action button -->
     </div>
   </section>
 
-  <!-- Featured Products -->
+  <!-- New arrivals displayed here -->
   <section class="featured-products">
     <h2>New Arrivals</h2>
     <div class="product-grid">
-      <!-- Product Card -->
-      <div class="product-card">
-        <img src="product1.jpg" alt="Product 1" />
+
+      <!-- Single product card -->
+      <article class="product-card">
+        <img src="assets/images/trendy-blazer.jpg" alt="Trendy Blazer" />
         <h3>Trendy Blazer</h3>
-        <p>45,000</p>
+        <p class="price">₦45,000</p>
         <button>Add to Cart</button>
-      </div>
-      <!-- Repeat for other products -->
+      </article>
+
+      <article class="product-card">
+        <img src="assets/images/casual-top.jpg" alt="Casual Top" />
+        <h3>Casual Top</h3>
+        <p class="price">₦25,000</p>
+        <button>Add to Cart</button>
+      </article>
+
+      <article class="product-card">
+        <img src="assets/images/denim-jacket.jpg" alt="Denim Jacket" />
+        <h3>Denim Jacket</h3>
+        <p class="price">₦30,000</p>
+        <button>Add to Cart</button>
+      </article>
+
     </div>
   </section>
 
-  <!-- Categories -->
+  <!-- Categories to help users find what they want quickly -->
   <section class="categories">
     <h2>Shop by Category</h2>
     <div class="category-grid">
@@ -58,17 +84,52 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer with socials and copyright -->
   <footer class="footer">
     <div class="container">
+<<<<<<< HEAD:pages/index.html
       <p>&copy; < FABRI-C-ODE />. All rights reserved.</p>
+=======
+      <p>&copy; 2025 Fabricode. All rights reserved.</p>
+>>>>>>> 21c1fc8 (Update index.html with the required HTML structure):index.html
       <div class="socials">
-        <a href="#">IG</a>
-        <a href="#">X</a>
-        <a href="#">FB</a>
+        <a href="#">Instagram</a>
+        <a href="#">X (Twitter)</a>
+        <a href="#">Facebook</a>
       </div>
     </div>
   </footer>
+
+  <!-- Login modal, hidden by default -->
+  <div class="modal" id="login-modal" hidden>
+    <div class="modal-content">
+      <h2>Login</h2>
+      <form>
+        <label>Email: <input type="email" required></label>
+        <label>Password: <input type="password" required></label>
+        <button type="submit">Sign In</button>
+      </form>
+      <button class="close-modal" aria-label="Close">&times;</button>
+    </div>
+  </div>
+
+  <!-- Signup modal, also hidden by default -->
+  <div class="modal" id="signup-modal" hidden>
+    <div class="modal-content">
+      <h2>Create Account</h2>
+      <form>
+        <label>Name: <input type="text" required></label>
+        <label>Email: <input type="email" required></label>
+        <label>Password: <input type="password" required></label>
+        <button type="submit">Sign Up</button>
+      </form>
+      <button class="close-modal" aria-label="Close">&times;</button>
+    </div>
+  </div>
+
+  <!-- JavaScript files to handle modal and cart functionality -->
+  <script src="main.js"></script>
+  <script src="cart.js"></script>
 
 </body>
 </html>
