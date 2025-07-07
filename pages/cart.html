@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart - Fabricode</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">&lt;FABRICODE&gt;</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Collections</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#" id="open-login">Login</a>
+        <a href="#" id="open-signup">Sign Up</a>
+        <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Cart Section -->
+  <main class="cart-page">
+    <div class="container">
+      <h1>Your Shopping Cart</h1>
+      <div id="cart-items" class="cart-items"></div>
+
+      <div class="cart-summary">
+        <h3>Total: ₦<span id="cart-total">0</span></h3>
+        <button id="checkout-btn" class="btn">Proceed to Checkout</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Modal for Login and Signup (optional reuse from index) -->
+  <div class="modal" id="login-modal" hidden>
+    <div class="modal-content">
+      <h2>Login</h2>
+      <form>
+        <label>Email: <input type="email" required></label>
+        <label>Password: <input type="password" required></label>
+        <button type="submit">Sign In</button>
+      </form>
+      <button class="close-modal" aria-label="Close">&times;</button>
+    </div>
+  </div>
+
+  <div class="modal" id="signup-modal" hidden>
+    <div class="modal-content">
+      <h2>Create Account</h2>
+      <form>
+        <label>Name: <input type="text" required></label>
+        <label>Email: <input type="email" required></label>
+        <label>Password: <input type="password" required></label>
+        <button type="submit">Sign Up</button>
+      </form>
+      <button class="close-modal" aria-label="Close">&times;</button>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Fabricode. All rights reserved.</p>
+      <div class="socials">
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../index.js"></script>
+  <script src="../scripts/cart.js"></script>
+
+</body>
+</html>
