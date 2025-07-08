@@ -1,4 +1,4 @@
-/* === Light Theme (default) === */
+ /* === Light Theme (default) === */
 :root {
   --bg: #ffffff;
   --text: #111111;
@@ -31,6 +31,7 @@ body {
   color: var(--text);
 }
 
+/* header style */
 .header {
   background: var(--primary);
   color: white;
@@ -40,13 +41,64 @@ body {
 .header .logo {
   font-size: 1.5rem;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.nav{
+  align-self: center;
 }
 
 .nav a {
-  margin-left: 1rem;
+  padding: 0.3rem 0.7rem;
+  margin-left: 0;
+  border-radius: 7px;
   color: white;
   text-decoration: none;
+  transition: all 0.15s;
 }
+
+.nav a:hover{
+  background-color: rgb(51, 51, 51);
+}
+
+.carter a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+.carter {
+  display: flex;
+  align-items: center;
+}
+
+
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.lbtn {
+  background-color: #ffff;
+  color: black !important; 
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.185s ease;
+}
+
+.lbtn:hover {
+  background-color: #ecebeb; 
+}
+
+.cart-icon {
+  font-size: 23px;
+}
+
+/* end of header */
 
 .hero {
   background: url('hero-image.jpg') center/cover no-repeat;
@@ -146,3 +198,8 @@ Redesign is needed by Team CSS*/
 .modal[hidden] {
   display: none;
 }
+
+
+
+
+
