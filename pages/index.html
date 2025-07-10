@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fabricode</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../assets/styles.css" />
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
@@ -24,19 +24,19 @@
       <div class="carter">
         <a href="#" class="lbtn" id="open-login">Login</a> <!-- Opens login modal -->
         <a href="#" class="osmp" id="open-signup">Sign Up</a> <!-- Opens signup modal -->
-        <a href="cart.html" class="cart-icon" aria-label="Cart"><i class='bx bx-cart'></i></a> <!-- Shopping cart icon -->
+        <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a> <!-- Shopping cart icon -->
       </div>
     </div>
   </header>
 
   <!-- Hero section to grab attention -->
-  <section class="hero">
+    <section class="hero">
     <div class="hero-content">
-      <h1 style="color: #8a6f78;">Slay Every Fit</h1>
-      <p style="color: #444;">Unleash your drip with the latest trends from Fabricode</p>
-      <a href="#" class="btn">Shop Now</a> <!-- Call to action button -->
+        <h1>Slay Every Fit</h1>
+        <p>Unleash your drip with the latest trends from Fabricode</p>
+        <a href="#categories" class="btn">Shop Now</a>
     </div>
-  </section>
+    </section>
 
   <!-- New arrivals displayed here -->
   <section class="featured-products">
@@ -69,7 +69,7 @@
   </section>
 
   <!-- Categories to help users find what they want quickly -->
-  <section class="categories">
+  <section class="categories" id="categories">
     <h2>Shop by Category</h2>
     <div class="category-grid">
       <div class="category-card">Tops</div>
@@ -94,29 +94,56 @@
   <!-- Login modal, hidden by default -->
   <div class="modal" id="login-modal" hidden>
     <div class="modal-content">
-      <h2>Login</h2>
-      <form>
-        <label>Email: <input type="email" required></label>
-        <label>Password: <input type="password" required></label>
-        <button type="submit">Sign In</button>
-      </form>
       <button class="close-modal" aria-label="Close">&times;</button>
+      <h2>Login</h2>
+    <form>
+      <table>
+        <tr>
+        <td><label for="login-email">Email:</label></td>
+        <td><input type="email" id="login-email" required></td>
+        </tr>
+        <tr>
+        <td><label for="login-password">Password:</label></td>
+        <td><input type="password" id="login-password" required></td>
+        </tr>
+        <tr>
+        <td colspan="2" style="text-align: right;">
+          <button type="submit">Sign In</button>
+        </td>
+        </tr>
+      </table>
+    </form>
     </div>
   </div>
 
   <!-- Signup modal, also hidden by default -->
-  <div class="modal" id="signup-modal" hidden>
+<div class="modal" id="signup-modal" hidden>
     <div class="modal-content">
-      <h2>Create Account</h2>
-      <form>
-        <label>Name: <input type="text" required></label>
-        <label>Email: <input type="email" required></label>
-        <label>Password: <input type="password" required></label>
-        <button type="submit">Sign Up</button>
-      </form>
-      <button class="close-modal" aria-label="Close">&times;</button>
+        <button class="close-modal" aria-label="Close">&times;</button>
+        <h2>Create Account</h2>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="signup-name">Name:</label></td>
+                    <td><input type="text" id="signup-name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="signup-email">Email:</label></td>
+                    <td><input type="email" id="signup-email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="signup-password">Password:</label></td>
+                    <td><input type="password" id="signup-password" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: right;">
+                        <button type="submit">Sign Up</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
     </div>
-  </div>
+</div>
 
   <!-- JavaScript files to handle modal and cart functionality -->
   <script src="../scripts/index.js"></script>

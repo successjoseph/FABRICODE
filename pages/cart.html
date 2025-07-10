@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cart - Fabricode</title>
-  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../assets/styles.css" />
 </head>
 <body>
 
@@ -13,15 +13,18 @@
     <div class="container">
       <div class="logo">&lt;FABRICODE&gt;</div>
       <nav class="nav">
-        <a href="index.html">Home</a>
+        <a href="#">Home</a>
         <a href="#">Shop</a>
         <a href="#">Collections</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-        <a href="#" id="open-login">Login</a>
-        <a href="#" id="open-signup">Sign Up</a>
-        <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
       </nav>
+
+      <div class="carter">
+        <a href="#" class="lbtn" id="open-login">Login</a> <!-- Opens login modal -->
+        <a href="#" class="osmp" id="open-signup">Sign Up</a> <!-- Opens signup modal -->
+        <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a> <!-- Shopping cart icon -->
+      </div>
     </div>
   </header>
 
@@ -65,7 +68,7 @@
   </div>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" style=" position: absolute; bottom: 0; width: 100%; padding: 20px; text-align: center;">
     <div class="container">
       <p>&copy; 2025 Fabricode. All rights reserved.</p>
       <div class="socials">
