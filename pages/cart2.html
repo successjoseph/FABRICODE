@@ -8,20 +8,19 @@
   <link rel="stylesheet" href="../assets/cart.css" />
   <style>
     .empty-cart-placeholder {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
+      min-height: 60vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
-      background-color: #fff;
-      z-index: 1000;
       font-size: 2rem;
       color: #999;
       text-align: center;
       padding: 2rem;
+    }
+    .cart-items.hidden,
+    .cart-summary.hidden {
+      display: none;
     }
   </style>
 </head>
@@ -105,14 +104,19 @@
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const cartItemsContainer = document.getElementById("cart-items");
     const cartTotalDisplay = document.getElementById("cart-total");
+    const cartSummary = document.querySelector(".cart-summary");
     const emptyCartMessage = document.getElementById("empty-cart-message");
 
     let total = 0;
 
     if (cart.length === 0) {
       emptyCartMessage.style.display = "flex";
+      cartItemsContainer.classList.add("hidden");
+      cartSummary.classList.add("hidden");
     } else {
       emptyCartMessage.style.display = "none";
+      cartItemsContainer.classList.remove("hidden");
+      cartSummary.classList.remove("hidden");
     }
 
     cart.forEach((item, index) => {
