@@ -58,6 +58,9 @@
 
 /* Cart summary styling */
 .cart-summary {
+  position: sticky;
+  top: 0;
+  bottom: 0;
   background: var(--section-bg);
   padding: 1.5rem;
   border-radius: 8px;
@@ -115,6 +118,7 @@
   /* Pin summary to bottom with some breathing room */
   .cart-summary {
     position: sticky;
+    top: 0;
     bottom: 0;
     width: 50%;
     box-shadow: 0 -2px 6px rgba(0,0,0,0.1);
