@@ -36,6 +36,9 @@ body {
   background: var(--primary);
   color: white;
   padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .header .logo {
@@ -44,17 +47,44 @@ body {
   cursor: pointer;
 }
 
-.nav{
-  align-self: center;
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
 }
 
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Default hidden nav (mobile) */
+.nav {
+  display: none;
+  flex-direction: column;
+  background: var(--primary);
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+
+/* Show nav when open */
+.nav.open {
+  display: flex;
+}
+
+/* Nav links style */
 .nav a {
-  padding: 0.3rem 0.7rem;
-  margin-left: 0;
-  border-radius: 7px;
+  padding: 1rem;
   color: white;
-  text-decoration: none;
-  transition: all 0.15s;
+  text-align: left;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 
 .nav a:hover{
@@ -241,4 +271,47 @@ Redesign is needed by Team CSS*/
     .hero-image {
         height: 50vh;
     }
+
+    .menu-toggle {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+        z-index: 100; /* sit above nav */
+    }
+
+    .menu-toggle.hidden {
+    display: none;
+    }
+
+    .logo {
+        order: 1;
+    }
+    .nav {
+    display: none;
+    flex-direction: column;
+    background: var(--primary);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    max-width: 200px;
+    z-index: 99;
+    }
+    .nav.open {
+    display: flex;
+    }
+    .nav a {
+    padding: 1rem;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+    text-align: left;
+    }
+
+    .carter {
+        order: 3;
+    }
+
 }
