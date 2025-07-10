@@ -5,41 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cart - Fabricode</title>
   <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="../assets/cart.css" />
 </head>
 <body>
 
   <!-- Header -->
-  <header class="header">
+    <header class="header">
     <div class="container">
-      <div class="logo">&lt;FABRICODE&gt;</div>
-      <nav class="nav">
+        <button class="menu-toggle" aria-label="Toggle menu">🙈</button>
+
+        <div class="logo">&lt;FABRICODE&gt;</div>
+
+        <nav class="nav">
         <a href="#">Home</a>
         <a href="#">Shop</a>
         <a href="#">Collections</a>
         <a href="#">About</a>
         <a href="#">Contact</a>
-      </nav>
+        </nav>
 
-      <div class="carter">
-        <a href="#" class="lbtn" id="open-login">Login</a> <!-- Opens login modal -->
-        <a href="#" class="osmp" id="open-signup">Sign Up</a> <!-- Opens signup modal -->
-        <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a> <!-- Shopping cart icon -->
-      </div>
+        <div class="carter">
+        <a href="#" class="lbtn" id="open-login">Login</a>
+        <a href="#" class="osmp" id="open-signup">Sign Up</a>
+        <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
+        </div>
     </div>
-  </header>
+    </header>
 
   <!-- Cart Section -->
   <main class="cart-page">
     <div class="container">
-      <h1>Your Shopping Cart</h1>
       <div id="cart-items" class="cart-items"></div>
-
       <div class="cart-summary">
         <h3>Total: ₦<span id="cart-total">0</span></h3>
         <button id="checkout-btn" class="btn">Proceed to Checkout</button>
       </div>
     </div>
   </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Fabricode. All rights reserved.</p>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">X (Twitter)</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+  </footer>
 
   <!-- Modal for Login and Signup (optional reuse from index) -->
   <div class="modal" id="login-modal" hidden>
@@ -67,17 +81,6 @@
     </div>
   </div>
 
-  <!-- Footer -->
-  <footer class="footer" style=" position: absolute; bottom: 0; width: 100%; padding: 20px; text-align: center;">
-    <div class="container">
-      <p>&copy; 2025 Fabricode. All rights reserved.</p>
-      <div class="socials">
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
-        <a href="https://x.com/" target="_blank" rel="noopener noreferrer">X (Twitter)</a>
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a>
-      </div>
-    </div>
-  </footer>
 
   <!-- Scripts -->
   <script src="../scripts/index.js"></script>
