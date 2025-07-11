@@ -63,7 +63,7 @@ body {
 }
 
 /* Default hidden nav (mobile) */
-.nav {
+/* .nav {
   display: none;
   flex-direction: column;
   background: var(--primary);
@@ -72,6 +72,14 @@ body {
   left: 0;
   width: 100%;
   z-index: 99;
+} */
+.nav {
+  display: flex;
+  flex-direction: row;
+  background: var(--primary);
+  position: static;
+  justify-content: center;
+  width: 100%;
 }
 
 /* Show nav when open */
@@ -84,7 +92,8 @@ body {
   padding: 1rem;
   color: white;
   text-align: left;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
+  /* border-bottom: 1px solid rgba(255,255,255,0.2); */
+  text-decoration: none;
 }
 
 .nav a:hover{
@@ -259,6 +268,7 @@ Redesign is needed by Team CSS*/
   color: black;
   cursor: pointer;
 }
+
 
 /* Keyframes for laptop view */
 @media (min-width: 1024px) {
