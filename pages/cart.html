@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../assets/styles.css" />
   <link rel="stylesheet" href="../assets/cart.css" />
 </head>
-<body>
+<body class="cart-body">
 
   <!-- Header -->
     <header class="header">
@@ -17,7 +17,7 @@
         <div class="logo">&lt;FABRICODE&gt;</div>
 
         <nav class="nav">
-        <a href="#">Home</a>
+        <a href="index.html">Home</a>
         <a href="#">Shop</a>
         <a href="#">Collections</a>
         <a href="#">About</a>
@@ -34,6 +34,9 @@
   <!-- Cart Section -->
   <main class="cart-page">
     <div class="container">
+      <div id="empty-cart-message" class="empty-cart-placeholder">
+        🛍️ Your cart is empty.
+      </div>
       <div id="cart-items" class="cart-items"></div>
       <div class="cart-summary">
         <h3>Total: ₦<span id="cart-total">0</span></h3>

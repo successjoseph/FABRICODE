@@ -1,3 +1,19 @@
+body.cart-body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.footer {
+  margin-top: auto;
+}
 /* Container grid */
 .cart-items {
   display: grid;
