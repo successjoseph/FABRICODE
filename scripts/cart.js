@@ -1,7 +1,7 @@
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 const cartItemsContainer = document.getElementById("cart-items");
 const cartTotalDisplay = document.getElementById("cart-total");
-const cartSummary = document.querySelector(".cart-summary");
+const cartSummary = document.getElementById("cart-summary");
 const emptyCartMessage = document.getElementById("empty-cart-message");
 
 let total = 0;
@@ -47,3 +47,4 @@ cartItemsContainer.addEventListener("click", (e) => {
     renderCart();
   }
 });
+
