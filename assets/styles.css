@@ -112,11 +112,6 @@ body {
 }
 
 
-.container{
-  display: flex;
-  justify-content: space-between;
-}
-
 .lbtn {
   background-color: #ffff;
   color: black !important; 
@@ -297,6 +292,7 @@ Redesign is needed by Team CSS*/
     }
 
     .logo {
+        font-size: 10px;
         order: 1;
     }
     .nav {

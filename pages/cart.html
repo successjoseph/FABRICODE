@@ -57,31 +57,59 @@
     </div>
   </footer>
 
-  <!-- Modal for Login and Signup (optional reuse from index) -->
+  <!-- Login modal, hidden by default -->
   <div class="modal" id="login-modal" hidden>
     <div class="modal-content">
-      <h2>Login</h2>
-      <form>
-        <label>Email: <input type="email" required></label>
-        <label>Password: <input type="password" required></label>
-        <button type="submit">Sign In</button>
-      </form>
       <button class="close-modal" aria-label="Close">&times;</button>
+      <h2>Login</h2>
+    <form>
+      <table>
+        <tr>
+        <td><label for="login-email">Email:</label></td>
+        <td><input type="email" id="login-email" required></td>
+        </tr>
+        <tr>
+        <td><label for="login-password">Password:</label></td>
+        <td><input type="password" id="login-password" required></td>
+        </tr>
+        <tr>
+        <td colspan="2" style="text-align: right;">
+          <button type="submit">Sign In</button>
+        </td>
+        </tr>
+      </table>
+    </form>
     </div>
   </div>
 
-  <div class="modal" id="signup-modal" hidden>
+  <!-- Signup modal, also hidden by default -->
+<div class="modal" id="signup-modal" hidden>
     <div class="modal-content">
-      <h2>Create Account</h2>
-      <form>
-        <label>Name: <input type="text" required></label>
-        <label>Email: <input type="email" required></label>
-        <label>Password: <input type="password" required></label>
-        <button type="submit">Sign Up</button>
-      </form>
-      <button class="close-modal" aria-label="Close">&times;</button>
+        <button class="close-modal" aria-label="Close">&times;</button>
+        <h2>Create Account</h2>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="signup-name">Name:</label></td>
+                    <td><input type="text" id="signup-name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="signup-email">Email:</label></td>
+                    <td><input type="email" id="signup-email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="signup-password">Password:</label></td>
+                    <td><input type="password" id="signup-password" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: right;">
+                        <button type="submit">Sign Up</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
     </div>
-  </div>
+</div>
 
 
   <!-- Scripts -->
