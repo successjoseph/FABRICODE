@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fabricode</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+
+  <!-- Header with logo and main navigation links -->
+<header class="header">
+  <div class="container">
+    <button class="menu-toggle" aria-label="Toggle menu"><i class='bx bx-menu'></i></button>
+
+    <div class="logo" style="color:#ff5e62;font-size:2rem;font-weight:900;letter-spacing:2px;">Fabricode</div>
+
+    <nav class="nav">
+      <a href="#" class="nav-link"><i class='bx bx-home'></i> Home</a>
+      <a href="#" class="nav-link"><i class='bx bx-store'></i> Shop</a>
+      <a href="#" class="nav-link"><i class='bx bx-grid-alt'></i> Categories</a>
+      <a href="#" class="nav-link"><i class='bx bx-star'></i> Deals</a>
+      <a href="#" class="nav-link"><i class='bx bx-info-circle'></i> Help</a>
+    </nav>
+
+    <form class="search-bar" style="flex:1;max-width:340px;margin:0 2rem;display:flex;align-items:center;">
+      <input type="text" placeholder="Search products, brands..." style="width:100%;padding:0.6rem 1rem;border-radius:24px;border:none;box-shadow:0 2px 8px rgba(255,94,98,0.08);font-size:1rem;">
+      <button type="submit" style="background:#ff5e62;border:none;border-radius:50%;width:38px;height:38px;display:flex;align-items:center;justify-content:center;margin-left:8px;cursor:pointer;"><i class='bx bx-search' style="color:#fff;font-size:1.4rem;"></i></button>
+    </form>
+
+    <div class="carter" style="display:flex;align-items:center;gap:1.2rem;">
+      <a href="#" class="lbtn" id="open-login" title="Account"><i class='bx bx-user'></i></a>
+      <a href="cart.html" class="cart-icon" aria-label="Cart" title="Cart"><i class='bx bx-cart'></i></a>
+      <a href="#" class="osmp" id="open-signup" title="Sign Up"><i class='bx bx-user-plus'></i></a>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav" hidden>
+    <a href="#" class="nav-link"><i class='bx bx-home'></i> Home</a>
+    <a href="#" class="nav-link"><i class='bx bx-store'></i> Shop</a>
+    <a href="#" class="nav-link"><i class='bx bx-grid-alt'></i> Categories</a>
+    <a href="#" class="nav-link"><i class='bx bx-star'></i> Deals</a>
+    <a href="#" class="nav-link"><i class='bx bx-info-circle'></i> Help</a>
+    <a href="#" class="lbtn" id="mobile-login"><i class='bx bx-user'></i> Login</a>
+    <a href="#" class="osmp" id="mobile-signup"><i class='bx bx-user-plus'></i> Sign Up</a>
+    <a href="cart.html" class="cart-icon" aria-label="Cart"><i class='bx bx-cart'></i></a>
+  </nav>
+  <!-- Modern mobile nav overlay -->
+  <div class="mobile-nav-overlay" id="mobileNavOverlay" hidden>
+    <div class="mobile-nav-panel">
+      <button class="close-mobile-nav" aria-label="Close">&times;</button>
+      <nav class="mobile-nav-links">
+        <a href="#" class="nav-link"><i class='bx bx-home'></i> Home</a>
+        <a href="#" class="nav-link"><i class='bx bx-store'></i> Shop</a>
+        <a href="#" class="nav-link"><i class='bx bx-grid-alt'></i> Categories</a>
+        <a href="#" class="nav-link"><i class='bx bx-star'></i> Deals</a>
+        <a href="#" class="nav-link"><i class='bx bx-info-circle'></i> Help</a>
+        <a href="#" class="lbtn" id="mobile-login"><i class='bx bx-user'></i> Login</a>
+        <a href="#" class="osmp" id="mobile-signup"><i class='bx bx-user-plus'></i> Sign Up</a>
+        <a href="cart.html" class="cart-icon" aria-label="Cart"><i class='bx bx-cart'></i></a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+  <!-- Hero section to grab attention -->
+    <section class="hero">
+      <div class="hero-content" style="background:rgba(255,255,255,0.85);border-radius:32px;box-shadow:0 8px 32px rgba(255,94,98,0.09);padding:2.5rem 2rem;text-align:center;max-width:600px;">
+        <h1 style="font-size:2.5rem;font-weight:900;color:#ff5e62;letter-spacing:2px;margin-bottom:0.5rem;">Welcome to Fabricode Marketplace</h1>
+        <p style="font-size:1.25rem;color:#7c3aed;margin-bottom:1.2rem;">Shop millions of products, discover daily deals, and enjoy secure shopping!</p>
+        <a href="#categories" class="btn" style="background:linear-gradient(90deg,#ff5e62 40%,#7c3aed 100%);color:#fff;font-weight:700;font-size:1.1rem;padding:1rem 2.2rem;border-radius:24px;box-shadow:0 2px 12px rgba(255,94,98,0.13);transition:background 0.18s,transform 0.18s;">Start Shopping <i class='bx bx-right-arrow-alt'></i></a>
+      </div>
+    </section>
+
+  <!-- New arrivals displayed here -->
+    <section class="featured-products">
+    <h2>New Arrivals</h2>
+    <div id="product-grid" class="product-grid"></div>
+    </section>
+
+  <!-- Categories to help users find what they want quickly -->
+  <section class="categories" id="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+      <div class="category-card">Tops</div>
+      <div class="category-card">Bottoms</div>
+      <div class="category-card">Accessories</div>
+      <div class="category-card">Shoes</div>
+    </div>
+  </section>
+
+  <!-- Footer with socials and copyright -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Fabricode. All rights reserved.</p>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">X (Twitter)</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login modal, hidden by default -->
+  <div class="modal" id="login-modal" hidden>
+    <div class="modal-content">
+      <button class="close-modal" aria-label="Close">&times;</button>
+      <h2>Login</h2>
+    <form>
+      <table>
+        <tr>
+        <td><label for="login-email">Email:</label></td>
+        <td><input type="email" id="login-email" required></td>
+        </tr>
+        <tr>
+        <td><label for="login-password">Password:</label></td>
+        <td><input type="password" id="login-password" required></td>
+        </tr>
+        <tr>
+        <td colspan="2" style="text-align: right;">
+          <button type="submit">Sign In</button>
+        </td>
+        </tr>
+      </table>
+    </form>
+    </div>
+  </div>
+
+  <!-- Signup modal, also hidden by default -->
+<div class="modal" id="signup-modal" hidden>
+    <div class="modal-content">
+        <button class="close-modal" aria-label="Close">&times;</button>
+        <h2>Create Account</h2>
+        <form>
+            <table>
+                <tr>
+                    <td><label for="signup-name">Name:</label></td>
+                    <td><input type="text" id="signup-name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="signup-email">Email:</label></td>
+                    <td><input type="email" id="signup-email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="signup-password">Password:</label></td>
+                    <td><input type="password" id="signup-password" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: right;">
+                        <button type="submit">Sign Up</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</div>
+
+  <!-- JavaScript files to handle modal and cart functionality -->
+  <script src="../scripts/index.js"></script>
+  <script src="../scripts/cart.js"></script>
+  <script>
+    // Modern hamburger nav logic with overlay and animation
+    const menuToggle = document.querySelector('.menu-toggle');
+    const mobileNavOverlay = document.getElementById('mobileNavOverlay');
+    const closeMobileNav = document.querySelector('.close-mobile-nav');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+    menuToggle.addEventListener('click', () => {
+      mobileNavOverlay.hidden = false;
+      setTimeout(() => mobileNavOverlay.classList.add('active'), 10);
+      menuToggle.classList.add('open');
+    });
+
+    closeMobileNav.addEventListener('click', () => {
+      mobileNavOverlay.classList.remove('active');
+      menuToggle.classList.remove('open');
+      setTimeout(() => mobileNavOverlay.hidden = true, 300);
+    });
+
+    mobileNavLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileNavOverlay.classList.remove('active');
+        menuToggle.classList.remove('open');
+        setTimeout(() => mobileNavOverlay.hidden = true, 300);
+      });
+    });
+  </script>
+
+</body>
+</html>
