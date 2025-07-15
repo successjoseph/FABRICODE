@@ -12,7 +12,7 @@
   );
   --text: #111111;
   --primary: #1c1c1c;
-  --accent: #e91e63;
+  --accent: royalblue;
   --muted: #777777;
   --card-bg: #ffffff;
   --section-bg: #f4f4f4;
@@ -45,7 +45,7 @@ body {
   background-color: var(--bg-color);
   background-image: var(--bg-shimmer);
   background-repeat: no-repeat;
-  background-size: 200% 200%;
+  background-size: 300% 300%;
   background-blend-mode: screen;
   animation: shimmer 6s ease-in-out infinite;
   color: #fff;
@@ -84,9 +84,6 @@ body.modal-open .page-content {
   display: none;
   background: none;
   border: none;
-  color: white;
-  font-size: 1.8rem;
-  cursor: pointer;
 }
 
 .container {
@@ -95,17 +92,7 @@ body.modal-open .page-content {
   justify-content: space-between;
 }
 
-/* Default hidden nav (mobile) */
-/* .nav {
-  display: none;
-  flex-direction: column;
-  background: var(--primary);
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-} */
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -125,7 +112,8 @@ body.modal-open .page-content {
   padding: 1rem;
   color: white;
   text-align: left;
-  /* border-bottom: 1px solid rgba(255,255,255,0.2); */
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255,255,255,0.2);
   text-decoration: none;
 }
 
@@ -319,39 +307,53 @@ Redesign is needed by Team CSS*/
         font-size: 2rem;
         color: white;
         cursor: pointer;
-        z-index: 100; /* sit above nav */
+        z-index: 100; 
     }
 
     .menu-toggle.hidden {
-    display: none;
+        display: none;
     }
 
-    .logo {
-        font-size: 10px;
+    .header .logo {
+        font-size: 15px;
         order: 1;
     }
+
     .nav {
-    display: none;
-    flex-direction: column;
-    background: var(--primary);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    max-width: 200px;
-    z-index: 99;
-    }
-    .nav.open {
-    display: flex;
-    }
-    .nav a {
-    padding: 1rem;
-    color: white;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    text-align: left;
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-width: 200px;
+        z-index: 99;
     }
 
-    .carter {
+    .nav.open {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 1rem;
+        color: white;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        text-align: left;
+    }
+
+    .lbtn {
+        background-color: #ffff;
+        color: black !important; 
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .cart {
         order: 3;
     }
 

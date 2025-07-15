@@ -1,4 +1,10 @@
-const menuToggle = document.querySelector('.menu-toggle');
+  const body       = document.body;
+  const loginModal = document.getElementById('login-modal');
+  const signupModal= document.getElementById('signup-modal');
+  const openLogin  = document.getElementById('open-login');
+  const openSignup = document.getElementById('open-signup');
+  const closeBtns  = document.querySelectorAll('.close-modal');
+  const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
   const SCROLL_THRESHOLD = 50;
 
@@ -23,14 +29,6 @@ const menuToggle = document.querySelector('.menu-toggle');
     }
   });
 
-
-
-const body       = document.body;
-const loginModal = document.getElementById('login-modal');
-const signupModal= document.getElementById('signup-modal');
-const openLogin  = document.getElementById('open-login');
-const openSignup = document.getElementById('open-signup');
-const closeBtns  = document.querySelectorAll('.close-modal');
 
 // Helpers
 function openModal(modal) {
