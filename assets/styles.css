@@ -101,11 +101,13 @@ body.modal-open .page-content {
 
 /* Nav links style */
 .nav a {
-  padding: 1rem;
+  padding: 0.7rem;
   color: white;
   text-align: left;
-  /* border-bottom: 1px solid rgba(255,255,255,0.2); */
+  border-bottom: 1px solid rgba(255,255,255,0.2);
   text-decoration: none;
+  border-radius: 7px;
+  transition: all 0.19s;
 }
 
 .nav a:hover{
@@ -116,13 +118,19 @@ body.modal-open .page-content {
   color: white;
   text-decoration: none;
   margin-left: 1rem;
+  
 }
 
 .carter {
   display: flex;
-  align-items: center;
+  vertical-align: middle;
+  text-align: center;
+  /* width: 23%; */
 }
 
+.osmp{
+  padding: 8px 16px;
+}
 
 .lbtn {
   background-color: #ffff;
