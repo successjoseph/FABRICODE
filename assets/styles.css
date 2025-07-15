@@ -31,6 +31,18 @@ body {
   color: var(--text);
 }
 
+/* When any modal is open… */
+body.modal-open {
+  overflow: hidden; 
+}
+
+/* Disable all clicks on page-content */
+body.modal-open .page-content {
+  pointer-events: none;       
+  user-select: none; 
+  opacity: 0.8;  
+}
+
 /* header style */
 .header {
   background: var(--primary);
@@ -239,7 +251,9 @@ Redesign is needed by Team CSS*/
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 9999;
+  pointer-events: auto;
+
 }
 
 .modal-content {
