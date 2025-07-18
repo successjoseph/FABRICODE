@@ -2,78 +2,68 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fabricode</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Board of Trustees – Fabricode</title>
   <link rel="stylesheet" href="../assets/styles.css" />
-  <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
+  <link rel="stylesheet" href="../assets/trustees.css" />
 </head>
 <body>
 <div class="page-content">
 
-  <!-- Header with logo and main navigation links -->
-<header class="header">
-  <div class="container">
-    <button class="menu-toggle" aria-label="Toggle menu">🙈</button>
-
-    <div class="logo">&lt;FABRICODE&gt;</div>
-
-    <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">Shop</a>
-      <a href="trustees.html">About</a>
-      <a href="#">Contact</a>
-    </nav>
-
-    <div class="carter">
-      <a href="#" class="lbtn" id="open-login">Login</a>
-      <a href="#" class="osmp" id="open-signup">Sign Up</a>
-      <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <button class="menu-toggle" aria-label="Toggle menu">🙈</button>
+      <div class="logo">&lt;FABRICODE&gt;</div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Collections</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+      <div class="carter">
+        <a href="#" class="lbtn" id="open-login">Login</a>
+        <a href="#" class="osmp" id="open-signup">Sign Up</a>
+        <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-  <!-- Hero section to grab attention -->
-    <section class="hero">
-    <div class="hero-content">
-        <h1>Slay Every Fit</h1>
-        <p>Unleash your drip with the latest trends from Fabricode</p>
-        <a href="#categories" class="btn">Shop Now</a>
-    </div>
+  <main class="trustee-page">
+
+    <!-- Carousel Container -->
+    <section class="trustee-carousel-container">
+      <button class="carousel-btn prev">&lt;</button>
+      <div class="trustee-carousel"></div>
+      <button class="carousel-btn next">&gt;</button>
     </section>
 
-  <!-- New arrivals displayed here -->
-    <section class="featured-products">
-    <h2>New Arrivals</h2>
-    <div id="product-grid" class="product-grid"></div>
+    <!-- About Fabricode Section -->
+    <section class="about-fabricode">
+      <h2>About Fabricode</h2>
+      <p>
+        Fabricode is Nigeria’s premier digital fashion hub—bringing you
+        fresh drops, expert curation, and a community that slays every fit.
+      </p>
     </section>
 
-    <hr color="royalblue" style="margin: 2rem 0;">
+  </main>
 
-  <!-- Categories to help users find what they want quickly -->
-  <section class="categories" id="categories">
-    <h2>Shop by Category</h2>
-    <div class="category-grid">
-      <div class="category-card">Tops</div>
-      <div class="category-card">Bottoms</div>
-      <div class="category-card">Accessories</div>
-      <div class="category-card">Shoes</div>
-    </div>
-  </section>
-
-  <!-- Footer with socials and copyright -->
-  <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer" style="position: absolute; bottom: 0vh;">
     <div class="container">
       <p>&copy; 2025 Fabricode. All rights reserved.</p>
       <div class="socials">
         <a href="#"><img src="../assets/instagram-icon.svg" alt="Instagram"></a>
-        <a href="#"><img src="../assets/twitter-icon.svg" alt="X (Twitter)"></a>
+        <a href="#"><img src="../assets/twitter-icon.svg" alt="Twitter"></a>
         <a href="#"><img src="../assets/facebook-icon.svg" alt="Facebook"></a>
       </div>
     </div>
   </footer>
 </div>
 
-  <!-- Login modal, hidden by default -->
+    <!-- Login modal, hidden by default -->
   <div class="modal" id="login-modal" hidden>
     <div class="modal-content">
       <button class="close-modal" aria-label="Close">&times;</button>
@@ -127,9 +117,9 @@
     </div>
 </div>
 
-  <!-- JavaScript files to handle modal and cart functionality -->
+  <!-- Carousel logic -->
+  <script src="../scripts/trustees.js"></script>
   <script src="../scripts/index.js"></script>
-  <script src="../scripts/cart.js"></script>
 
 </body>
 </html>

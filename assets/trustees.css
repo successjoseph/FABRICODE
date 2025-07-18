@@ -1,0 +1,80 @@
+/* Carousel Wrapper */
+.trustee-carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+/* Slide Track */
+.trustee-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Card */
+.trustee-card {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  text-align: center;
+  background: transparent;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.trustee-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.trustee-card h3 {
+  margin: 0.5rem 0 0.25rem;
+  font-size: 1.2rem;
+}
+
+.trustee-card .role {
+  color: var(--accent);
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
+.trustee-card .bio {
+  font-size: 0.95rem;
+  color: var(--muted);
+  line-height: 1.4;
+}
+
+/* Prev/Next Buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.8rem;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* About Section */
+.about-fabricode {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  text-align: center;
+}
+.about-fabricode h2 {
+  margin-bottom: 0.5rem;
+}
+.about-fabricode p {
+  color: var(--text);
+  line-height: 1.6;
+}

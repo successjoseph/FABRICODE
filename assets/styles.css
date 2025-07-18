@@ -1,9 +1,18 @@
  /* === Light Theme (default) === */
 :root {
-  --bg: #ffffff;
+  /* Base black */
+  --bg-color: #000000;
+  --bg-shimmer: linear-gradient(
+    45deg,
+    rgba(212,175,55,0.4)  0%,
+    rgba(255,215,0,0.8)   25%,
+    rgba(244,196,48,0.4)  50%,
+    rgba(255,215,0,0.8)   75%,
+    rgba(212,175,55,0.4) 100%
+  );
   --text: #111111;
   --primary: #1c1c1c;
-  --accent: #e91e63;
+  --accent: royalblue;
   --muted: #777777;
   --card-bg: #ffffff;
   --section-bg: #f4f4f4;
@@ -24,11 +33,35 @@
   --btn-text: #121212;
 }
 
+@keyframes shimmer {
+  0%   { background-position:   0% 0%; }
+  50%  { background-position: 100% 100%; }
+  100% { background-position:   0% 0%; }
+}
+
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: var(--bg);
-  color: var(--text);
+  background-color: var(--bg-color);
+  background-image: var(--bg-shimmer);
+  background-repeat: no-repeat;
+  background-size: 300% 300%;
+  background-blend-mode: screen;
+  animation: shimmer 6s ease-in-out infinite;
+  color: #fff;
+}
+
+
+/* When any modal is open… */
+body.modal-open {
+  overflow: hidden; 
+}
+
+/* Disable all clicks on page-content */
+body.modal-open .page-content {
+  pointer-events: none;       
+  user-select: none; 
+  opacity: 0.8;  
 }
 
 /* header style */
@@ -51,9 +84,6 @@ body {
   display: none;
   background: none;
   border: none;
-  color: white;
-  font-size: 1.8rem;
-  cursor: pointer;
 }
 
 .container {
@@ -62,17 +92,7 @@ body {
   justify-content: space-between;
 }
 
-/* Default hidden nav (mobile) */
-/* .nav {
-  display: none;
-  flex-direction: column;
-  background: var(--primary);
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-} */
+
 .nav {
   display: flex;
   flex-direction: row;
@@ -92,7 +112,8 @@ body {
   padding: 1rem;
   color: white;
   text-align: left;
-  /* border-bottom: 1px solid rgba(255,255,255,0.2); */
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  border-top: 1px solid rgba(255,255,255,0.2);
   text-decoration: none;
 }
 
@@ -188,7 +209,7 @@ body {
 }
 
 .product-card {
-  background: white;
+  background:transparent;
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
@@ -239,7 +260,9 @@ Redesign is needed by Team CSS*/
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  z-index: 999;
+  z-index: 9999;
+  pointer-events: auto;
+
 }
 
 .modal-content {
@@ -284,39 +307,53 @@ Redesign is needed by Team CSS*/
         font-size: 2rem;
         color: white;
         cursor: pointer;
-        z-index: 100; /* sit above nav */
+        z-index: 100; 
     }
 
     .menu-toggle.hidden {
-    display: none;
+        display: none;
     }
 
-    .logo {
-        font-size: 10px;
+    .header .logo {
+        font-size: 15px;
         order: 1;
     }
+
     .nav {
-    display: none;
-    flex-direction: column;
-    background: var(--primary);
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    max-width: 200px;
-    z-index: 99;
-    }
-    .nav.open {
-    display: flex;
-    }
-    .nav a {
-    padding: 1rem;
-    color: white;
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-    text-align: left;
+        display: none;
+        flex-direction: column;
+        background: var(--primary);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-width: 200px;
+        z-index: 99;
     }
 
-    .carter {
+    .nav.open {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 1rem;
+        color: white;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        text-align: left;
+    }
+
+    .lbtn {
+        background-color: #ffff;
+        color: black !important; 
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 10px;
+        font-weight: 600;
+    }
+
+    .cart {
         order: 3;
     }
 

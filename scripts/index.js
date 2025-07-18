@@ -1,4 +1,10 @@
-const menuToggle = document.querySelector('.menu-toggle');
+  const body       = document.body;
+  const loginModal = document.getElementById('login-modal');
+  const signupModal= document.getElementById('signup-modal');
+  const openLogin  = document.getElementById('open-login');
+  const openSignup = document.getElementById('open-signup');
+  const closeBtns  = document.querySelectorAll('.close-modal');
+  const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
   const SCROLL_THRESHOLD = 50;
 
@@ -24,35 +30,32 @@ const menuToggle = document.querySelector('.menu-toggle');
   });
 
 
+// Helpers
+function openModal(modal) {
+  modal.hidden = false;
+  body.classList.add('modal-open');
+}
+function closeModals() {
+  [loginModal, signupModal].forEach(m => m.hidden = true);
+  body.classList.remove('modal-open');
+}
 
-// Get modal
-const loginModal = document.getElementById("login-modal");
-const signupModal = document.getElementById("signup-modal");
-
-// Get nav buttons to open modals
-const openLoginBtn = document.getElementById("open-login");
-const openSignupBtn = document.getElementById("open-signup");
-
-// Get "x" button inside modal
-const closeButtons = document.querySelectorAll(".close-modal");
-
-// Open Login Modal
-openLoginBtn.addEventListener("click", (e) => {
+// Openers
+openLogin.addEventListener('click', e => {
   e.preventDefault();
-  loginModal.removeAttribute("hidden");
+  openModal(loginModal);
+});
+openSignup.addEventListener('click', e => {
+  e.preventDefault();
+  openModal(signupModal);
 });
 
-// Open Signup Modal
-openSignupBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-  signupModal.removeAttribute("hidden");
-});
-
-// Close modals
-closeButtons.forEach((btn) => {
-  btn.addEventListener("click", () => {
-    btn.parentElement.parentElement.setAttribute("hidden", true);
-  });
+// Closers (buttons + Escape key)
+closeBtns.forEach(btn => btn.addEventListener('click', closeModals));
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && body.classList.contains('modal-open')) {
+    closeModals();
+  }
 });
 
 fetch('../data/catalog.json')
