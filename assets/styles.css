@@ -82,6 +82,11 @@ body.modal-open .page-content {
   cursor: pointer;
 }
 
+.header .logo a {
+  text-decoration: none;
+  color: white;
+}
+
 .menu-toggle {
   display: none;
   background: none;
@@ -398,4 +403,4 @@ Redesign is needed by Team CSS*/
         order: 2;
     }
 
-}
+  }
