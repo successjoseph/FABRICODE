@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Catalog – Fabricode</title>
+</head>
+<body>
+
+  <h1>FABRICODE</h1>
+
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="catalog.html">Catalog</a> |
+    <a href="trustees.html">About</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <!-- Search bar -->
+  <section>
+    <input type="search" id="catalog-search" placeholder="Search products..." aria-label="Search products" />
+     <button type="submit" aria-label="Submit search">🔍</button>
+  </section>
+
+  <h2>New Arrivals</h2>
+  <div id="new-arrivals" role="region" aria-live="polite" aria-label="New Arrivals"></div>
+
+  <h2>Full Catalog</h2>
+  <div id="goods" role="region" aria-live="polite" aria-label="Full Catalog"></div>
+
+  <!-- Two-column cart layout placeholder -->
+  <section id="cart-section" aria-label="Shopping Cart">
+    <div id="cart-left-column" aria-label="Cart Items"></div>
+    <div id="cart-right-column" aria-label="Cart Details"></div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Fabricode</p>
+  </footer>
+
+  <script src="scripts/catalog.js"></script>
+</body>
+</html>

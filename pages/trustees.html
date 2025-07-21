@@ -10,6 +10,16 @@
 <body>
 <div class="page-content">
 
+  <!-- 📢 Static Marquee -->
+  <marquee class="announcement">
+    📢 Welcome to the Board of Trustees page — Stay updated with the latest Fabricode news and events.
+  </marquee>
+
+  <!-- 📢 Dynamic Marquee Placeholder -->
+  <div id="dynamic-marquee" class="announcement">
+    <!-- This will be populated by JavaScript with admin-added announcements -->
+  </div>
+
   <!-- Header -->
     <header class="header">
     <div class="container">
@@ -22,7 +32,8 @@
         <a href="#">Shop</a>
         <a href="trustees.html">About</a>
         <a href="#">Contact</a>
-        </nav>
+          <a href="editors.html">Editor</a>
+      </nav>
 
         <div class="carter">
         <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
@@ -71,58 +82,58 @@
   </footer>
 </div>
 
-    <!-- Login modal, hidden by default -->
-  <div class="modal" id="login-modal" hidden>
-    <div class="modal-content">
-      <button class="close-modal" aria-label="Close">&times;</button>
-      <h2>Login</h2>
+<!-- Login modal, hidden by default -->
+<div class="modal" id="login-modal" hidden>
+  <div class="modal-content">
+    <button class="close-modal" aria-label="Close">&times;</button>
+    <h2>Login</h2>
     <form>
       <table>
         <tr>
-        <td><label for="login-email">Email:</label></td>
-        <td><input type="email" id="login-email" required></td>
+          <td><label for="login-email">Email:</label></td>
+          <td><input type="email" id="login-email" required></td>
         </tr>
         <tr>
-        <td><label for="login-password">Password:</label></td>
-        <td><input type="password" id="login-password" required></td>
+          <td><label for="login-password">Password:</label></td>
+          <td><input type="password" id="login-password" required></td>
         </tr>
         <tr>
-        <td colspan="2" style="text-align: right;">
-          <button type="submit">Sign In</button>
-        </td>
+          <td colspan="2" style="text-align: right;">
+            <button type="submit">Sign In</button>
+          </td>
         </tr>
       </table>
     </form>
-    </div>
   </div>
+</div>
 
-  <!-- Signup modal, also hidden by default -->
+<!-- Signup modal, also hidden by default -->
 <div class="modal" id="signup-modal" hidden>
-    <div class="modal-content">
-        <button class="close-modal" aria-label="Close">&times;</button>
-        <h2>Create Account</h2>
-        <form>
-            <table>
-                <tr>
-                    <td><label for="signup-name">Name:</label></td>
-                    <td><input type="text" id="signup-name" required></td>
-                </tr>
-                <tr>
-                    <td><label for="signup-email">Email:</label></td>
-                    <td><input type="email" id="signup-email" required></td>
-                </tr>
-                <tr>
-                    <td><label for="signup-password">Password:</label></td>
-                    <td><input type="password" id="signup-password" required></td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align: right;">
-                        <button type="submit">Sign Up</button>
-                    </td>
-                </tr>
-            </table>
-        </form>
-    </div>
+  <div class="modal-content">
+    <button class="close-modal" aria-label="Close">&times;</button>
+    <h2>Create Account</h2>
+    <form>
+      <table>
+        <tr>
+          <td><label for="signup-name">Name:</label></td>
+          <td><input type="text" id="signup-name" required></td>
+        </tr>
+        <tr>
+          <td><label for="signup-email">Email:</label></td>
+          <td><input type="email" id="signup-email" required></td>
+        </tr>
+        <tr>
+          <td><label for="signup-password">Password:</label></td>
+          <td><input type="password" id="signup-password" required></td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: right;">
+            <button type="submit">Sign Up</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+  </div>
 </div>
 
 
