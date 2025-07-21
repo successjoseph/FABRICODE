@@ -215,9 +215,19 @@ body.modal-open .page-content {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
-.hero-content .btn {
+.btn {
   padding: .75rem 1.5rem;
   font-size: 1rem;
+  border: gold 1px solid;
+  border-radius: 4px;
+  background: rgba(212,175,55,0.4);
+  cursor: pointer;
+  color: var(--btn-text);
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: rgba(255,215,0,0.8);
 }
 
 .featured-products {

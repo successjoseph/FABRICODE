@@ -73,10 +73,10 @@
         },
         {
         "id": 10,
-        "name": "Onuegbu Chidera Precious",
+        "name": "Dominic Kishatingunimye Awaufung",
         "role": "Board Member",
         "techStack": "HTML, CSS, JavaScript",
-        "bio": " Aspiring full-stack developer & tech enthusiast with hands-on experience in React and Node.js, building simple web applications. Passionate about learning and crafting innovative the solutions to real-world problems.",
+        "bio": "I am a  data scientist, and research strategist passionate about leveraging science, technology, and mentorship to drive impactful solutions. With extensive experience leading multidisciplinary health projects, developing AI-powered research tools, and building tech-driven communities, I empower organizations and individuals to innovate, grow, and transform lives.",
         "image": "../assets/trustees/trustee10.jpg"
         },
         {
@@ -105,18 +105,18 @@
         },
         {
         "id": 14,
-        "name": "Dominic Kishatingunimye Awaufung",
+        "name": "Onuegbu Chidera Precious",
         "role": "Board Member",
         "techStack": "HTML, CSS, JavaScript",
-        "bio": "I am a  data scientist, and research strategist passionate about leveraging science, technology, and mentorship to drive impactful solutions. With extensive experience leading multidisciplinary health projects, developing AI-powered research tools, and building tech-driven communities, I empower organizations and individuals to innovate, grow, and transform lives.",
+        "bio": "Aspiring full-stack developer & tech enthusiast with hands-on experience in React and Node.js, building simple web applications. Passionate about learning and crafting innovative the solutions to real-world problems.",
         "image": "../assets/trustees/trustee14.jpg"
         },
         {
         "id": 15,
-        "name": "Trustee Name 15",
+        "name": "Michael Immaculate",
         "role": "Board Member",
         "techStack": "HTML, CSS, JavaScript",
-        "bio": "Brief bio for Trustee Name 15 goes here.",
+        "bio": "specializing in cloud computing by day, debugging life problems by night.",
         "image": "../assets/trustees/trustee15.jpg"
     }
 ]
