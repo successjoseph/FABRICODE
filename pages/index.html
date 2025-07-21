@@ -10,27 +10,32 @@
 <body>
 <div class="page-content">
 
-  <!-- Header with logo and main navigation links -->
-<header class="header">
-  <div class="container">
-    <button class="menu-toggle" aria-label="Toggle menu">🙈</button>
+  <!-- Header -->
+    <header class="header">
+    <div class="container">
+        <button class="menu-toggle" aria-label="Toggle menu">🙈</button>
 
-    <div class="logo">&lt;FABRICODE&gt;</div>
+        <div class="logo">&lt;FABRICODE&gt;</div>
 
-    <nav class="nav">
-      <a href="#">Home</a>
-      <a href="#">Shop</a>
-      <a href="trustees.html">About</a>
-      <a href="#">Contact</a>
-    </nav>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="#">Shop</a>
+          <a href="trustees.html">About</a>
+          <a href="#">Contact</a>
+        </nav>
 
-    <div class="carter">
-      <a href="#" class="lbtn" id="open-login">Login</a>
-      <a href="#" class="osmp" id="open-signup">Sign Up</a>
-      <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
+        <div class="carter">
+          <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
+          <a href="#" id="user-trigger" class="cart-icon">👤</a>
+
+          <div class="user-dropdown hidden">
+              <a href="#" id="dropdown-login">Login</a>
+              <a href="#" id="dropdown-signup">Sign Up</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
-</header>
+    </header>
 
   <!-- Hero section to grab attention -->
     <section class="hero">
@@ -46,8 +51,6 @@
     <h2>New Arrivals</h2>
     <div id="product-grid" class="product-grid"></div>
     </section>
-
-    <hr color="royalblue" style="margin: 2rem 0;">
 
   <!-- Categories to help users find what they want quickly -->
   <section class="categories" id="categories">
@@ -133,3 +136,4 @@
 
 </body>
 </html>
+ 

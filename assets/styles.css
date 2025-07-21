@@ -12,7 +12,7 @@
   );
   --text: #111111;
   --primary: #1c1c1c;
-  --accent: royalblue;
+  --accent: skyblue;
   --muted: #777777;
   --card-bg: #ffffff;
   --section-bg: #f4f4f4;
@@ -49,6 +49,8 @@ body {
   background-blend-mode: screen;
   animation: shimmer 6s ease-in-out infinite;
   color: #fff;
+  scroll-behavior: smooth;
+
 }
 
 
@@ -121,6 +123,11 @@ body.modal-open .page-content {
   background-color: rgb(51, 51, 51);
 }
 
+.nav a:active {
+  background-color: skyblue;
+  color: white;
+}
+
 .carter a {
   color: white;
   text-decoration: none;
@@ -130,24 +137,40 @@ body.modal-open .page-content {
 .carter {
   display: flex;
   align-items: center;
+  position: relative;
 }
 
-
-.lbtn {
-  background-color: #ffff;
-  color: black !important; 
-  border: none;
-  padding: 8px 16px;
+/* Dropdown panel */
+.user-dropdown {
+  position: absolute;
+  top: 120%;                      /* just below the icon */
+  right: 0;
+  background:  rgba(255,255,255,0.2);
+  border: 1px solid var(--muted);
   border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.185s ease;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+  z-index: 1001;
 }
 
-.lbtn:hover {
-  background-color: #ecebeb; 
+/* Hide/show */
+.user-dropdown.hidden {
+  display: none;
 }
+
+/* Dropdown items */
+.user-dropdown a {
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.user-dropdown a:hover {
+  background:  rgba(255,255,255,0.2);
+}
+
 
 .cart-icon {
   font-size: 23px;
@@ -206,6 +229,12 @@ body.modal-open .page-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
+}
+
+.product-grid img {
+  max-width: 100%;
+  border-radius: 8px;
+  max-height: 100px;
 }
 
 .product-card {
@@ -315,9 +344,11 @@ Redesign is needed by Team CSS*/
     }
 
     .header .logo {
-        font-size: 15px;
-        order: 1;
+        font-size: 25px;
+        order: 0;
+
     }
+
 
     .nav {
         display: none;
@@ -354,7 +385,7 @@ Redesign is needed by Team CSS*/
     }
 
     .cart {
-        order: 3;
+        order: 2;
     }
 
 }

@@ -7,6 +7,56 @@
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
   const SCROLL_THRESHOLD = 50;
+  const userTrigger    = document.getElementById('user-trigger');
+  const userDropdown   = document.querySelector('.user-dropdown');
+  const dropdownLogin  = document.getElementById('dropdown-login');
+  const dropdownSignup = document.getElementById('dropdown-signup');
+
+console.log('close buttons found:', closeBtns.length);
+// Toggle dropdown on icon click
+userTrigger.addEventListener('click', e => {
+  e.preventDefault();
+  userDropdown.classList.toggle('hidden');
+});
+
+// Open Login modal
+dropdownLogin.addEventListener('click', e => {
+  e.preventDefault();
+  openModal(loginModal);
+  userDropdown.classList.add('hidden');
+});
+
+// Open Signup modal
+dropdownSignup.addEventListener('click', e => {
+  e.preventDefault();
+  openModal(signupModal);
+  userDropdown.classList.add('hidden');
+});
+
+// Close dropdown if clicking outside
+document.addEventListener('click', e => {
+  if (!userTrigger.contains(e.target) && !userDropdown.contains(e.target)) {
+    userDropdown.classList.add('hidden');
+  }
+});
+
+// Helpers
+function openModal(modal) {
+  modal.hidden = false;
+  body.classList.add('modal-open');
+}
+function closeModals() {
+  [loginModal, signupModal].forEach(m => m.hidden = true);
+  body.classList.remove('modal-open');
+}
+
+// Closers (buttons + Escape key)
+closeBtns.forEach(btn => btn.addEventListener('click', closeModals));
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && body.classList.contains('modal-open')) {
+    closeModals();
+  }
+});
 
   // Click → open/close nav and swap emojis
   menuToggle.addEventListener('click', () => {
@@ -29,34 +79,6 @@
     }
   });
 
-
-// Helpers
-function openModal(modal) {
-  modal.hidden = false;
-  body.classList.add('modal-open');
-}
-function closeModals() {
-  [loginModal, signupModal].forEach(m => m.hidden = true);
-  body.classList.remove('modal-open');
-}
-
-// Openers
-openLogin.addEventListener('click', e => {
-  e.preventDefault();
-  openModal(loginModal);
-});
-openSignup.addEventListener('click', e => {
-  e.preventDefault();
-  openModal(signupModal);
-});
-
-// Closers (buttons + Escape key)
-closeBtns.forEach(btn => btn.addEventListener('click', closeModals));
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && body.classList.contains('modal-open')) {
-    closeModals();
-  }
-});
 
 fetch('../data/catalog.json')
     .then(res => {
@@ -99,3 +121,7 @@ fetch('../data/catalog.json')
     alert(`${product.name} added to cart.`);
   }
 });
+
+
+// References
+

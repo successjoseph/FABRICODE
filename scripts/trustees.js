@@ -20,6 +20,7 @@ function initCarousel(items) {
       <img src="${t.image}" alt="${t.name}" />
       <h3>${t.name}</h3>
       <p class="role">${t.role}</p>
+      <p class="TechStack">${t.techStack}</p>
       <p class="bio">${t.bio}</p>
     `;
     carousel.appendChild(card);
@@ -31,8 +32,8 @@ function initCarousel(items) {
   prev.addEventListener('click', () => slide(-1));
   next.addEventListener('click', () => slide(1));
 
-  // Auto‐slide every 5s
-  setInterval(() => slide(1), 5000);
+  // Auto‐slide every 10s
+  setInterval(() => slide(1), 10000);
 
   // Adjust on resize
   window.addEventListener('resize', updateView);

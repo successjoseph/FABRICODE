@@ -1,107 +1,122 @@
 [
     {
-    "id": 1,
-    "name": "Trustee Name 1",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 1 goes here.",
-    "image": "../assets/trustees/trustee1.jpg"
-    },
-    {
-    "id": 2,
-    "name": "Trustee Name 2",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 2 goes here.",
-    "image": "../assets/trustees/trustee2.jpg"
-    },
-    {
-    "id": 3,
-    "name": "Trustee Name 3",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 3 goes here.",
-    "image": "../assets/trustees/trustee3.jpg"
-    },
-    {
-    "id": 4,
-    "name": "Trustee Name 4",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 4 goes here.",
-    "image": "../assets/trustees/trustee4.jpg"
-    },
-    {
-    "id": 5,
-    "name": "Trustee Name 5",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 5 goes here.",
-    "image": "../assets/trustees/trustee5.jpg"
-    },
-    {
-    "id": 6,
-    "name": "Trustee Name 6",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 6 goes here.",
-    "image": "../assets/trustees/trustee6.jpg"
-    },
-    {
-    "id": 7,
-    "name": "Trustee Name 7",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 7 goes here.",
-    "image": "../assets/trustees/trustee7.jpg"
-    },
-    {
-    "id": 8,
-    "name": "Trustee Name 8",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 8 goes here.",
-    "image": "../assets/trustees/trustee8.jpg"
-    },
-    {
-    "id": 9,
-    "name": "Trustee Name 9",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 9 goes here.",
-    "image": "../assets/trustees/trustee9.jpg"
-    },
-    {
-    "id": 10,
-    "name": "Trustee Name 10",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 10 goes here.",
-    "image": "../assets/trustees/trustee10.jpg"
-    },
-    {
-    "id": 11,
-    "name": "Trustee Name 11",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 11 goes here.", 
-    "image": "../assets/trustees/trustee11.jpg"
-    },
-    {
-    "id": 12,
-    "name": "Trustee Name 12",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 12 goes here.",
-    "image": "../assets/trustees/trustee12.jpg"
-    },
-    {
-    "id": 13,
-    "name": "Trustee Name 13",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 13 goes here.",
-    "image": "../assets/trustees/trustee13.jpg"
-    },
-    {
-    "id": 14,
-    "name": "Trustee Name 14",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 14 goes here.",
-    "image": "../assets/trustees/trustee14.jpg"
-    },
-    {
-    "id": 15,
-    "name": "Trustee Name 15",
-    "role": "Board Member",
-    "bio": "Brief bio for Trustee Name 15 goes here.",
-    "image": "../assets/trustees/trustee15.jpg"
+        "id": 1,
+        "name": "Akinnusi Success Joseph",
+        "role": "Team Lead, FullStack Developer",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "I am a FullStack Developer with a passion for building web applications that solve real-world problems. I love exploring new technologies and continuously improving my skills, I love my team, the work we do and I love seeing my software bettering people's lives.",
+        "image": "../assets/trustees/trustee1.jpg"
+        },
+        {
+        "id": 2,
+        "name": "John Precious",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "Passionate problem-solver with experience in Java and Python. Currently exploring diverse areas in technology to discover where I can make the greatest impact and continue growing as a developer.",
+        "image": "../assets/trustees/trustee2.jpg"
+        },
+        {
+        "id": 3,
+        "name": "Ohenusi Liberty",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "Semi-Serious human with zero social life and a penchant obsessing over things. Techie.",
+        "image": "../assets/trustees/trustee3.jpg"
+        },
+        {
+        "id": 4,
+        "name": "Fenichukwu Akporowho Melvina",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "Just a curious learner developing real skills in programming and tech.",
+        "image": "../assets/trustees/trustee4.jpg"
+        },
+        {
+        "id": 5,
+        "name": "Divine Isaiah",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "I’m an education content researcher and writer, an aspiring software engineer, and a creative problem-solver. I love exploring how tech improves lives.",
+        "image": "../assets/trustees/trustee5.jpg"
+        },
+        {
+        "id": 6,
+        "name": "Oluwajuwon Eunice Eletu",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "I am a young lady who is driven by curiosity and aims to develop innovative solutions for the tech world.",
+        "image": "../assets/trustees/trustee6.jpg"
+        },
+        {
+        "id": 7,
+        "name": "Nwajagu Gloria",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "Lab meets code. Industrial chemist , learning and exploring cybersecurity and a dash of HSE enthusiasm.",
+        "image": "../assets/trustees/trustee7.jpg"
+        },
+        {
+        "id": 8,
+        "name": "Brino Gilbert",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "I'm a learner at the feet of The Lord, looking earnestly onto Him for directions in this small but complex world. While diving into the advanced network-like interconnected systems of programming and technology.",
+        "image": "../assets/trustees/trustee8.jpg"
+        },
+        {
+        "id": 9,
+        "name": "Kalejaiye Jamiu",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "Aspiring copywriter with a growing passion for blockchain and Web3.",
+        "image": "../assets/trustees/trustee9.jpg"
+        },
+        {
+        "id": 10,
+        "name": "Onuegbu Chidera Precious",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": " Aspiring full-stack developer & tech enthusiast with hands-on experience in React and Node.js, building simple web applications. Passionate about learning and crafting innovative the solutions to real-world problems.",
+        "image": "../assets/trustees/trustee10.jpg"
+        },
+        {
+        "id": 11,
+        "name": "Anietie Udoh",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "I am a smart and intelligent guy....who is new into cybersecurity but got the basics in tech....I ❤ tech.",
+        "image": "../assets/trustees/trustee11.jpg"
+        },
+        {
+        "id": 12,
+        "name": "Olufunmilola Oluwamuyiwa",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "I am curious and driven to learn new things, especially in the Tech world.",
+        "image": "../assets/trustees/trustee12.jpg"
+        },
+        {
+        "id": 13,
+        "name": "Cynthia Jacobs",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "I am a self-driven individual at the early stages of tech, with a constant urge to learn, explore deeply, and improve both personally and professionally.",
+        "image": "../assets/trustees/trustee13.jpg"
+        },
+        {
+        "id": 14,
+        "name": "Dominic Kishatingunimye Awaufung",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "I am a  data scientist, and research strategist passionate about leveraging science, technology, and mentorship to drive impactful solutions. With extensive experience leading multidisciplinary health projects, developing AI-powered research tools, and building tech-driven communities, I empower organizations and individuals to innovate, grow, and transform lives.",
+        "image": "../assets/trustees/trustee14.jpg"
+        },
+        {
+        "id": 15,
+        "name": "Trustee Name 15",
+        "role": "Board Member",
+        "techStack": "HTML, CSS, JavaScript",
+        "bio": "Brief bio for Trustee Name 15 goes here.",
+        "image": "../assets/trustees/trustee15.jpg"
     }
 ]
