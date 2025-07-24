@@ -292,6 +292,13 @@ body.modal-open .page-content {
   max-width: 100%;
   width: 100%;
   box-sizing: border-box;
+  margin-top: auto;
+}
+
+.page-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
