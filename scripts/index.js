@@ -60,8 +60,6 @@ document.addEventListener('keydown', e => {
   // Click → open/close nav and swap emojis
   menuToggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
-    // 🙈 closed → 🙉 open
-    menuToggle.textContent = isOpen ? '🙉' : '🙈';
   });
 
   // Scroll → hide when beyond threshold, re-show near top
