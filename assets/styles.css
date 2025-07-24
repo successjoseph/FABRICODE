@@ -1,3 +1,78 @@
+/* --- Search Results Page Styles --- */
+
+.search-results {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: linear-gradient(135deg, #1c1c1c 60%, #d4af37 100%);
+  border-radius: 18px;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  box-shadow: 0 4px 32px rgba(212,175,55,0.15);
+}
+
+.search-results h2 {
+  font-size: 2.2rem;
+  color: #ffd700;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #1c1c1c44;
+}
+
+.searchItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: #222;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 2px 12px rgba(212,175,55,0.08);
+  transition: box-shadow 0.2s;
+}
+.searchItem:hover {
+  box-shadow: 0 4px 24px rgba(212,175,55,0.18);
+}
+.searchItem img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(212,175,55,0.12);
+  background: #fff;
+}
+.searchItem span {
+  display: block;
+  font-size: 1.1rem;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+.searchItem strong {
+  font-size: 1.2rem;
+  color: #ffd700;
+  letter-spacing: 0.5px;
+}
+.searchItem small {
+  color: #e5c76b;
+  font-size: 0.98rem;
+}
+.searchItem button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  background: #ffd700;
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(212,175,55,0.10);
+}
+.searchItem button:hover {
+  background: #222;
+  color: #ffd700;
+  border: 1px solid #ffd700;
+}
  /* === Light Theme (default) === */
 :root {
   /* Base black */
@@ -292,9 +367,11 @@ body.modal-open .page-content {
   max-width: 100%;
   width: 100%;
   box-sizing: border-box;
+  margin-top: auto;
 }
 
 .page-content {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
