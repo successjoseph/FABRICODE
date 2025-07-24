@@ -26,6 +26,32 @@
     }
   ],
   "categories": {
+        "newarrivals": [
+        {
+        "id": 1,
+        "name": "Trendy Blazer",
+        "price": 45000,
+        "currency": "NGN",
+        "image": "../assets/images/trendyblazerimg.jpg",
+        "description": "A stylish and trendy blazer for all occasions."
+        },
+        {
+        "id": 2,
+        "name": "Casual Top",
+        "price": 25000,
+        "currency": "NGN",
+        "image": "../assets/images/casual-top.jpg",
+        "description": "A comfortable casual top for everyday wear."
+        },
+        {
+        "id": 3,
+        "name": "Denim Jacket",
+        "price": 30000,
+        "currency": "NGN",
+        "image": "../assets/images/denim-jacket.jpg",
+        "description": "Classic denim jacket for a cool look."
+        }
+    ],
     "tops": [
       {
         "id": 4,

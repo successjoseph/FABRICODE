@@ -276,6 +276,13 @@ body.modal-open .page-content {
   cursor: pointer;
 }
 
+.catalog-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer {
   bottom: 0;
   background: var(--primary);
@@ -335,6 +342,11 @@ Redesign is needed by Team CSS*/
 }
 
 @media (max-width: 768px) {
+    .header{
+        border: 2px solid black;
+        border-radius: 40px;
+    }
+
     .hero-image {
         height: 50vh;
     }

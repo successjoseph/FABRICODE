@@ -3,31 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product Catalog – Fabricode</title>
+  <title>Upcoming Events – Fabricode</title>
   <link rel="stylesheet" href="../assets/styles.css" />
-  <link rel="stylesheet" href="../assets/catalog.css" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 </head>
 <body>
 <div class="page-content">
 
-    <!-- Static Marquee -->
-     <marquee>📢 The code is in the fabric. Decode your style. Elevate your wardrobe. Explore what’s trending at Fabricode.</marquee>
+  <!-- Static Marquee -->
+  <marquee>🎉 Stay tuned for the latest Fabricode events and pop-ups!</marquee>
 
-    <!-- Dynamic Marquee Placeholder -->
-    <div class="dynamic-marquee-container">
-      <div class="dynamic-marquee">
-        <span id="dynamic-text"></span>
-      </div>
-    </div>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-        <button class="menu-toggle" aria-label="Toggle menu">🙈</button>
-
-        <div class="logo">&lt;FABRICODE&gt;</div>
-
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <button class="menu-toggle" aria-label="Toggle menu">🙈</button>
+      <div class="logo">&lt;FABRICODE&gt;</div>
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="catalog.html">Shop</a>
@@ -35,36 +25,36 @@
         <a href="uc-ev.html">Events</a>
         <a href="contact.html">Contact</a>
       </nav>
-
-        <div class="carter">
-            <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
-            <a href="#" id="user-trigger" class="cart-icon">👤</a>
-
-            <div class="user-dropdown hidden">
-                <a href="#" id="dropdown-login">Login</a>
-                <a href="#" id="dropdown-signup">Sign Up</a>
-            </div>
+      <div class="carter">
+        <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
+        <a href="#" id="user-trigger" class="cart-icon">👤</a>
+        <div class="user-dropdown hidden">
+          <a href="#" id="dropdown-login">Login</a>
+          <a href="#" id="dropdown-signup">Sign Up</a>
         </div>
-        </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-
-  <!-- Search -->
+  <!-- Events Section -->
   <section class="featured-products">
-    <input type="search" id="catalog-search" placeholder="Search products…" aria-label="Search products" />
-    <button type="submit" class="search-btn" aria-label="Submit search">🔍</button>
-  </section>
-
-    <!-- New Arrivals -->
-    <section class="featured-products">
-      <h2>New Arrivals</h2>
-      <div id="product-grid" class="product-grid"></div>
-    </section>
-
-  <!-- Full Catalog -->
-  <section class="featured-products">
-    <h2>All Products</h2>
-    <div id="goods" class="product-grid" aria-live="polite" aria-label="Full Catalog"></div>
+    <h2>Upcoming Events</h2>
+    <div id="events-list" class="product-grid">
+      <!-- Example event card -->
+      <article class="product-card">
+        <h3>Fabricode Pop-Up Shop</h3>
+        <p><strong>Date:</strong> August 15, 2025</p>
+        <p><strong>Location:</strong> Lagos Fashion Mall</p>
+        <p>Join us for exclusive deals, new arrivals, and a chance to meet the team!</p>
+      </article>
+      <article class="product-card">
+        <h3>Style Masterclass</h3>
+        <p><strong>Date:</strong> September 2, 2025</p>
+        <p><strong>Location:</strong> Online (Zoom)</p>
+        <p>Learn how to decode your style with our lead designer. Free for all registered users!</p>
+      </article>
+      <!-- Add more events here -->
+    </div>
   </section>
 
   <!-- Footer -->
@@ -80,7 +70,7 @@
   </footer>
 </div>
 
-<!-- Modals -->
+<!-- Modals (optional, for login/signup) -->
 <div class="modal" id="login-modal" hidden>
   <div class="modal-content">
     <button class="close-modal" aria-label="Close">&times;</button>
@@ -119,7 +109,6 @@
 
 <!-- Scripts -->
 <script src="../scripts/index.js"></script>
-<script src="../scripts/catalog.js"></script>
-
+<script src="../scripts/cart.js"></script>
 </body>
 </html>

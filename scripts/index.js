@@ -12,7 +12,6 @@
   const dropdownLogin  = document.getElementById('dropdown-login');
   const dropdownSignup = document.getElementById('dropdown-signup');
 
-console.log('close buttons found:', closeBtns.length);
 // Toggle dropdown on icon click
 userTrigger.addEventListener('click', e => {
   e.preventDefault();
@@ -79,32 +78,47 @@ document.addEventListener('keydown', e => {
     }
   });
 
-
 fetch('../data/catalog.json')
-    .then(res => {
+  .then(res => {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return res.json();
   })
-  .then((data) => {
+  .then(data => {
     const arrivals = data.newarrivals;
-    const container = document.getElementById('product-grid');
+    const categories = data.categories;
+    const arrivalsContainer = document.getElementById('product-grid');
+    const goodsContainer = document.getElementById('goods');
 
+    // Render new arrivals
     arrivals.forEach(product => {
       const card = document.createElement('article');
       card.className = 'product-card';
-
       card.innerHTML = `
         <img src="${product.image}" alt="${product.name}" />
         <h3>${product.name}</h3>
         <p class="price">₦${product.price.toLocaleString()}</p>
         <button data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">Add to Cart</button>
       `;
+      arrivalsContainer.appendChild(card);
+    });
 
-      container.appendChild(card);
+    // Flatten all category arrays into one list
+    const allProducts = Object.values(categories).flat();
+
+    // Render full catalog
+    allProducts.forEach(product => {
+      const card = document.createElement('article');
+      card.className = 'product-card';
+      card.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" />
+        <h3>${product.name}</h3>
+        <p class="price">₦${product.price.toLocaleString()}</p>
+        <button data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">Add to Cart</button>
+      `;
+      goodsContainer.appendChild(card);
     });
   })
   .catch(console.error);
-
   document.addEventListener('click', (e) => {
   if (e.target.tagName === 'BUTTON' && e.target.textContent === 'Add to Cart') {
     const product = {
@@ -123,5 +137,4 @@ fetch('../data/catalog.json')
 });
 
 
-// References
 

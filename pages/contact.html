@@ -3,31 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Product Catalog – Fabricode</title>
+  <title>Contact Us – Fabricode</title>
   <link rel="stylesheet" href="../assets/styles.css" />
-  <link rel="stylesheet" href="../assets/catalog.css" />
   <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
 </head>
 <body>
 <div class="page-content">
 
-    <!-- Static Marquee -->
-     <marquee>📢 The code is in the fabric. Decode your style. Elevate your wardrobe. Explore what’s trending at Fabricode.</marquee>
+  <!-- Static Marquee -->
+  <marquee>📧 Reach out to us or subscribe for the latest drops and updates!</marquee>
 
-    <!-- Dynamic Marquee Placeholder -->
-    <div class="dynamic-marquee-container">
-      <div class="dynamic-marquee">
-        <span id="dynamic-text"></span>
-      </div>
-    </div>
-
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-        <button class="menu-toggle" aria-label="Toggle menu">🙈</button>
-
-        <div class="logo">&lt;FABRICODE&gt;</div>
-
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <button class="menu-toggle" aria-label="Toggle menu">🙈</button>
+      <div class="logo">&lt;FABRICODE&gt;</div>
       <nav class="nav">
         <a href="index.html">Home</a>
         <a href="catalog.html">Shop</a>
@@ -35,36 +25,45 @@
         <a href="uc-ev.html">Events</a>
         <a href="contact.html">Contact</a>
       </nav>
-
-        <div class="carter">
-            <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
-            <a href="#" id="user-trigger" class="cart-icon">👤</a>
-
-            <div class="user-dropdown hidden">
-                <a href="#" id="dropdown-login">Login</a>
-                <a href="#" id="dropdown-signup">Sign Up</a>
-            </div>
+      <div class="carter">
+        <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
+        <a href="#" id="user-trigger" class="cart-icon">👤</a>
+        <div class="user-dropdown hidden">
+          <a href="#" id="dropdown-login">Login</a>
+          <a href="#" id="dropdown-signup">Sign Up</a>
         </div>
-        </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-
-  <!-- Search -->
+  <!-- Contact Section -->
   <section class="featured-products">
-    <input type="search" id="catalog-search" placeholder="Search products…" aria-label="Search products" />
-    <button type="submit" class="search-btn" aria-label="Submit search">🔍</button>
+    <h2>Contact Us</h2>
+    <form id="contact-form" style="max-width:400px;margin:auto;">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required style="width:100%;margin-bottom:1rem;">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required style="width:100%;margin-bottom:1rem;">
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required style="width:100%;margin-bottom:1rem;"></textarea>
+      <button type="submit" class="btn" style="width:100%;">Send Message</button>
+    </form>
+    <div id="contact-success" style="text-align:center;color:var(--accent);margin-top:1rem;display:none;">
+      Thank you for reaching out! We'll get back to you soon.
+    </div>
   </section>
 
-    <!-- New Arrivals -->
-    <section class="featured-products">
-      <h2>New Arrivals</h2>
-      <div id="product-grid" class="product-grid"></div>
-    </section>
-
-  <!-- Full Catalog -->
+  <!-- Newsletter Section -->
   <section class="featured-products">
-    <h2>All Products</h2>
-    <div id="goods" class="product-grid" aria-live="polite" aria-label="Full Catalog"></div>
+    <h2>Subscribe to Our Newsletter</h2>
+    <form id="newsletter-form" style="max-width:400px;margin:auto;">
+      <label for="newsletter-email">Email:</label>
+      <input type="email" id="newsletter-email" name="newsletter-email" required style="width:100%;margin-bottom:1rem;">
+      <button type="submit" class="btn" style="width:100%;">Subscribe</button>
+    </form>
+    <div id="newsletter-success" style="text-align:center;color:var(--accent);margin-top:1rem;display:none;">
+      You're subscribed! Watch your inbox for the latest news.
+    </div>
   </section>
 
   <!-- Footer -->
@@ -80,7 +79,7 @@
   </footer>
 </div>
 
-<!-- Modals -->
+<!-- Modals (optional, for login/signup) -->
 <div class="modal" id="login-modal" hidden>
   <div class="modal-content">
     <button class="close-modal" aria-label="Close">&times;</button>
@@ -119,7 +118,17 @@
 
 <!-- Scripts -->
 <script src="../scripts/index.js"></script>
-<script src="../scripts/catalog.js"></script>
-
+<script>
+document.getElementById('contact-form').onsubmit = function(e) {
+  e.preventDefault();
+  document.getElementById('contact-success').style.display = 'block';
+  this.reset();
+};
+document.getElementById('newsletter-form').onsubmit = function(e) {
+  e.preventDefault();
+  document.getElementById('newsletter-success').style.display = 'block';
+  this.reset();
+};
+</script>
 </body>
 </html>
