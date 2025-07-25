@@ -1,0 +1,122 @@
+/* === Light Theme (default) === */
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --primary: #1c1c1c;
+  --accent: #e91e63;
+  --muted: #777777;
+  --card-bg: #ffffff;
+  --section-bg: #f4f4f4;
+  --btn-bg: var(--accent);
+  --btn-text: #ffffff;
+}
+
+/* === Dark Theme === */
+.dark-theme {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --primary: #1e1e1e;
+  --accent: #bb86fc;
+  --muted: #aaaaaa;
+  --card-bg: #1f1f1f;
+  --section-bg: #181818;
+  --btn-bg: var(--accent);
+  --btn-text: #121212;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background: url('hero-image.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero .btn {
+  background: var(--accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.featured-products {
+  padding: 2rem;
+  background: var(--light-gray);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.categories {
+  padding: 2rem;
+}
+
+.category-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  background: var(--primary);
+  color: white;
+  padding: 2rem;
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.footer {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.footer .socials a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}

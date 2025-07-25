@@ -1,0 +1,272 @@
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fabricode</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Header with logo and main navigation links -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">&lt;FABRICODE&gt;</div>
+      <nav class="nav">
+        <a href="#">Home</a>
+        <a href="#">Shop</a>
+        <a href="#">Collections</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#" id="open-login">Login</a>
+        <a href="#" id="open-signup">Sign Up</a>
+        <a href="#" class="cart-icon" aria-label="Cart">🛒</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero section to grab attention -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 style="color: #8a6f78;">Slay Every Fit</h1>
+      <p style="color: #444;">Unleash your drip with the latest trends from Fabricode</p>
+      <a href="#" class="btn">Shop Now</a>
+    </div>
+  </section>
+
+  <!-- New arrivals displayed here -->
+  <section class="featured-products">
+    <h2>New Arrivals</h2>
+    <div class="product-grid">
+      <article class="product-card">
+        <img src="asset/images/trendy-blazer.jpg" alt="Trendy Blazer" />
+        <h3>Trendy Blazer</h3>
+        <p class="price">₦45,000</p>
+        <button>Add to Cart</button>
+      </article>
+
+      <article class="product-card">
+        <img src="asset/images/casual-top.jpg" alt="Casual Top" />
+        <h3>Casual Top</h3>
+        <p class="price">₦25,000</p>
+        <button>Add to Cart</button>
+      </article>
+
+      <article class="product-card">
+        <img src="asset/images/denim-jacket.jpg" alt="Denim Jacket" />
+        <h3>Denim Jacket</h3>
+        <p class="price">₦30,000</p>
+        <button>Add to Cart</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Categories to help users find what they want quickly -->
+  <section class="categories">
+    <h2>Shop by Category</h2>
+    <div class="category-grid">
+      <div class="category-card">Tops</div>
+      <div class="category-card">Bottoms</div>
+      <div class="category-card">Accessories</div>
+      <div class="category-card">Shoes</div>
+    </div>
+  </section>
+
+  <!-- Footer with socials and copyright -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Fabricode. All rights reserved.</p>
+      <div class="socials">
+        <a href="#">Instagram</a>
+        <a href="#">X (Twitter)</a>
+        <a href="#">Facebook</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login modal, hidden by default -->
+  <div class="modal" id="login-modal" hidden>
+    <div class="modal-content">
+      <h2>Login</h2>
+      <form>
+        <label>Email: <input type="email" required></label>
+        <label>Password: <input type="password" required></label>
+        <button type="submit">Sign In</button>
+      </form>
+      <button class="close-modal" aria-label="Close">&times;</button>
+    </div>
+  </div>
+
+  <!-- Signup modal, also hidden by default -->
+  <div class="modal" id="signup-modal" hidden>
+    <div class="modal-content">
+      <h2>Create Account</h2>
+      <form>
+        <label>Name: <input type="text" required></label>
+        <label>Email: <input type="email" required></label>
+        <label>Password: <input type="password" required></label>
+        <button type="submit">Sign Up</button>
+      </form>
+      <button class="close-modal" aria-label="Close">&times;</button>
+    </div>
+  </div>
+
+  <!-- JavaScript files to handle modal and cart functionality -->
+  <script src="main.js"></script>
+  <script src="cart.js"></script>
+
+</body>
+</html>
+-->
+
+
+
+
+/* /* === Light Theme (default) ===
+:root {
+  --bg: #ffffff;
+  --text: #111111;
+  --primary: #1c1c1c;
+  --accent: #e91e63;
+  --muted: #777777;
+  --card-bg: #ffffff;
+  --section-bg: #f4f4f4;
+  --btn-bg: var(--accent);
+  --btn-text: #ffffff;
+}
+
+/* === Dark Theme === */
+.dark-theme {
+  --bg: #121212;
+  --text: #f0f0f0;
+  --primary: #1e1e1e;
+  --accent: #bb86fc;
+  --muted: #aaaaaa;
+  --card-bg: #1f1f1f;
+  --section-bg: #181818;
+  --btn-bg: var(--accent);
+  --btn-text: #121212;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.header {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+}
+
+.header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin-left: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background: url('hero-image.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.hero .btn {
+  background: var(--accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  font-weight: bold;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.featured-products {
+  padding: 2rem;
+  background: var(--light-gray);
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.product-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.categories {
+  padding: 2rem;
+}
+
+.category-grid {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.category-card {
+  background: var(--primary);
+  color: white;
+  padding: 2rem;
+  flex: 1;
+  min-width: 150px;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.footer {
+  background: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.footer .socials a {
+  color: white;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

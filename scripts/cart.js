@@ -1,3 +1,4 @@
+// Getting all the cart elements ready for display and updates
 const cart = JSON.parse(localStorage.getItem("cart")) || [];
 const cartItemsContainer = document.getElementById("cart-items");
 const cartTotalDisplay = document.getElementById("cart-total");
@@ -6,6 +7,7 @@ const emptyCartMessage = document.getElementById("empty-cart-message");
 
 let total = 0;
 
+// Show the cart, update the total, and let users remove stuff
 function renderCart() {
   cartItemsContainer.innerHTML = "";
   total = 0;

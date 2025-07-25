@@ -1,3 +1,5 @@
+// Wait for the page to load, then fetch trustees and display them in the carousel
+
 document.addEventListener('DOMContentLoaded', () => {
   fetch('../data/trustees.json')
     .then(res => {
