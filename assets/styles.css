@@ -9,6 +9,7 @@
   box-shadow: 0 4px 32px rgba(212,175,55,0.15);
 }
 
+/* Search results title styling */
 .search-results h2 {
   font-size: 2.2rem;
   color: #ffd700;
@@ -18,6 +19,7 @@
   text-shadow: 0 2px 8px #1c1c1c44;
 }
 
+/* Style for each search result */
 .searchItem {
   display: flex;
   align-items: flex-start;
@@ -32,6 +34,7 @@
 .searchItem:hover {
   box-shadow: 0 4px 24px rgba(212,175,55,0.18);
 }
+
 .searchItem img {
   width: 90px;
   height: 90px;
@@ -54,7 +57,10 @@
 .searchItem small {
   color: #e5c76b;
   font-size: 0.98rem;
+
 }
+
+/* Button styling for each search item */
 .searchItem button {
   margin-top: 0.5rem;
   padding: 0.5rem 1.2rem;
@@ -254,7 +260,9 @@ body.modal-open .page-content {
 /* end of header */
 
 .hero {
-  /* full viewport height */
+  
+  /* Covers the full screen with a hero image and centers content both vertically and horizontally */
+
   height: 100vh;          
   width: 100%;  
   background: url('hero.png') no-repeat center/cover;  
@@ -378,9 +386,8 @@ body.modal-open .page-content {
 
 
 
-/* Modal Styles 
-Test design by: YaqarHTML (He sucks at designing)
-Redesign is needed by Team CSS*/
+/* Styles for the modal layout and background */
+
 .modal {
   position: fixed;
   inset: 0;
