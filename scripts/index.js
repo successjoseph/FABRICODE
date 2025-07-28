@@ -72,12 +72,13 @@ fetch('../data/catalog.json')
       card.className = 'product-card';
 
       card.innerHTML = `
-        <img src="${product.image}" alt="${product.name}" />
-        <h3>${product.name}</h3>
+        <img class="img-pd" src="${product.image}" alt="${product.name}" />
+        <div class="img-cn">
+        <h3 class="prod-tag >${product.name}</h3>
         <p class="price">₦${product.price.toLocaleString()}</p>
-        <button data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">Add to Cart</button>
+        <button class="prod-btn" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">Add to Cart</button>
+        </div>
       `;
-
       container.appendChild(card);
     });
   })

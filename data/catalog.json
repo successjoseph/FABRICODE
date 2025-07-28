@@ -5,7 +5,7 @@
       "name": "Trendy Blazer",
       "price": 45000,
       "currency": "NGN",
-      "image": "../assets/images/trendyblazerimg.jpg",
+      "image": "../assets/images/african-woman-.jpg",
       "description": "A stylish and trendy blazer for all occasions."
     },
     {
@@ -13,7 +13,7 @@
       "name": "Casual Top",
       "price": 25000,
       "currency": "NGN",
-      "image": "../assets/images/casual-top.jpg",
+      "image": "../assets/images/woman.jpg",
       "description": "A comfortable casual top for everyday wear."
     },
     {
@@ -21,7 +21,7 @@
       "name": "Denim Jacket",
       "price": 30000,
       "currency": "NGN",
-      "image": "../assets/images/denim-jacket.jpg",
+      "image": "../assets/images/park.jpg",
       "description": "Classic denim jacket for a cool look."
     }
   ],
