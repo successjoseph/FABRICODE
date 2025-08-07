@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Product Catalog – Fabricode</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="../assets/catalog.css" />
+  <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+<body>
+<div class="page-content">
+
+    <!-- Just adding a basic scrolling text here-->
+     <!-- Static Marquee -->
+
+     <marquee>📢 The code is in the fabric. Decode your style. Elevate your wardrobe. Explore what’s trending at Fabricode.</marquee>
+
+    <!-- Dynamic Marquee Placeholder -->
+    <div class="dynamic-marquee-container">
+      <div class="dynamic-marquee">
+        <span id="dynamic-text"></span>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+        <span class="menu-toggle" aria-label="Toggle menu">
+          <i class="bx bx-menu"></i>
+        </span>
+        <div class="logo">&lt;FABRICODE&gt;</div>
+
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Shop</a>
+        <a href="trustees.html">About</a>
+        <a href="uc-ev.html">Events</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+        <div class="carter">
+            <a href="cart.html" class="cart-icon" aria-label="Cart">🛒</a>
+            <a href="#" id="user-trigger" class="cart-icon">👤</a>
+
+            <div class="user-dropdown hidden">
+                <a href="#" id="dropdown-login">Login</a>
+                <a href="#" id="dropdown-signup">Sign Up</a>
+            </div>
+        </div>
+        </div>
+    </header>
+
+
+  
+  <!-- Search -->
+  <section class="featured-products">
+    <input type="search" id="catalog-search" placeholder="Search products…" aria-label="Search products" />
+    <button type="submit" class="search-btn" aria-label="Submit search">🔍</button>
+  </section>
+
+    <!-- New Arrivals -->
+    <section class="featured-products">
+      <h2>New Arrivals</h2>
+      <div id="product-grid" class="product-grid"></div>
+    </section>
+
+  <!-- Full Catalog -->
+  <section class="featured-products">
+    <h2>All Products</h2>
+    <div id="goods" class="product-grid" aria-live="polite" aria-label="Full Catalog"></div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Fabricode. All rights reserved.</p>
+      <div class="socials">
+        <a href="#"><img src="../assets/instagram-icon.svg" alt="Instagram"></a>
+        <a href="#"><img src="../assets/twitter-icon.svg" alt="X (Twitter)"></a>
+        <a href="#"><img src="../assets/facebook-icon.svg" alt="Facebook"></a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+<!-- Modals -->
+<div class="modal" id="login-modal" hidden>
+  <div class="modal-content">
+    <button class="close-modal" aria-label="Close">&times;</button>
+    <h2>Login</h2>
+    <form>
+      <table>
+        <tr><td><label for="login-email">Email:</label></td>
+            <td><input type="email" id="login-email" required></td></tr>
+        <tr><td><label for="login-password">Password:</label></td>
+            <td><input type="password" id="login-password" required></td></tr>
+        <tr><td colspan="2" style="text-align: right;">
+            <button type="submit">Sign In</button></td></tr>
+      </table>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="signup-modal" hidden>
+  <div class="modal-content">
+    <button class="close-modal" aria-label="Close">&times;</button>
+    <h2>Create Account</h2>
+    <form>
+      <table>
+        <tr><td><label for="signup-name">Name:</label></td>
+            <td><input type="text" id="signup-name" required></td></tr>
+        <tr><td><label for="signup-email">Email:</label></td>
+            <td><input type="email" id="signup-email" required></td></tr>
+        <tr><td><label for="signup-password">Password:</label></td>
+            <td><input type="password" id="signup-password" required></td></tr>
+        <tr><td colspan="2" style="text-align: right;">
+            <button type="submit">Sign Up</button></td></tr>
+      </table>
+    </form>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="../scripts/index.js"></script>
+<script src="../scripts/catalog.js"></script>
+
+</body>
+<script src="../scripts/search.js"></script>
+</html>

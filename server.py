@@ -3,7 +3,7 @@ import socketserver
 import os
 import time
 
-PORT = 8080
+PORT = 5050
 URL = f'http://localhost:{PORT}/pages/index.html'
 
 

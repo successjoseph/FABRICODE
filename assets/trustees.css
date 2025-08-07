@@ -15,6 +15,7 @@
 /* Individual Card */
 .trustee-card {
   min-width: 100%;
+  height: 60vh;
   box-sizing: border-box;
   padding: 1.5rem;
   text-align: center;
@@ -24,8 +25,8 @@
 }
 
 .trustee-card img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
@@ -33,19 +34,26 @@
 
 .trustee-card h3 {
   margin: 0.5rem 0 0.25rem;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
 }
 
 .trustee-card .role {
-  color: var(--accent);
-  font-weight: bold;
-  margin-bottom: 0.75rem;
+  color: skyblue;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  margin: 0.5rem 0 0.25rem;
 }
 
 .trustee-card .bio {
   font-size: 0.95rem;
-  color: var(--muted);
+  color: whitesmoke;
   line-height: 1.4;
+}
+
+.trustee-card .TechStack {
+  font-size: 1.2rem;
+  color: whitesmoke;
+  margin-top: 0.5rem;
 }
 
 /* Prev/Next Buttons */

@@ -7,12 +7,59 @@
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav');
   const SCROLL_THRESHOLD = 50;
+  const userTrigger    = document.getElementById('user-trigger');
+  const userDropdown   = document.querySelector('.user-dropdown');
+  const dropdownLogin  = document.getElementById('dropdown-login');
+  const dropdownSignup = document.getElementById('dropdown-signup');
+
+// Toggle dropdown on icon click
+userTrigger.addEventListener('click', e => {
+  e.preventDefault();
+  userDropdown.classList.toggle('hidden');
+});
+
+// Open Login modal
+dropdownLogin.addEventListener('click', e => {
+  e.preventDefault();
+  openModal(loginModal);
+  userDropdown.classList.add('hidden');
+});
+
+// Open Signup modal
+dropdownSignup.addEventListener('click', e => {
+  e.preventDefault();
+  openModal(signupModal);
+  userDropdown.classList.add('hidden');
+});
+
+// Close dropdown if clicking outside
+document.addEventListener('click', e => {
+  if (!userTrigger.contains(e.target) && !userDropdown.contains(e.target)) {
+    userDropdown.classList.add('hidden');
+  }
+});
+
+// Helpers
+function openModal(modal) {
+  modal.hidden = false;
+  body.classList.add('modal-open');
+}
+function closeModals() {
+  [loginModal, signupModal].forEach(m => m.hidden = true);
+  body.classList.remove('modal-open');
+}
+
+// Closers (buttons + Escape key)
+closeBtns.forEach(btn => btn.addEventListener('click', closeModals));
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && body.classList.contains('modal-open')) {
+    closeModals();
+  }
+});
 
   // Click → open/close nav and swap emojis
   menuToggle.addEventListener('click', () => {
     const isOpen = nav.classList.toggle('open');
-    // 🙈 closed → 🙉 open
-    menuToggle.textContent = isOpen ? '🙉' : '🙈';
   });
 
   // Scroll → hide when beyond threshold, re-show near top
@@ -29,44 +76,18 @@
     }
   });
 
-
-// Helpers
-function openModal(modal) {
-  modal.hidden = false;
-  body.classList.add('modal-open');
-}
-function closeModals() {
-  [loginModal, signupModal].forEach(m => m.hidden = true);
-  body.classList.remove('modal-open');
-}
-
-// Openers
-openLogin.addEventListener('click', e => {
-  e.preventDefault();
-  openModal(loginModal);
-});
-openSignup.addEventListener('click', e => {
-  e.preventDefault();
-  openModal(signupModal);
-});
-
-// Closers (buttons + Escape key)
-closeBtns.forEach(btn => btn.addEventListener('click', closeModals));
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape' && body.classList.contains('modal-open')) {
-    closeModals();
-  }
-});
-
 fetch('../data/catalog.json')
-    .then(res => {
+  .then(res => {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return res.json();
   })
-  .then((data) => {
+  .then(data => {
     const arrivals = data.newarrivals;
-    const container = document.getElementById('product-grid');
+    const categories = data.categories;
+    const arrivalsContainer = document.getElementById('product-grid');
+    const goodsContainer = document.getElementById('goods');
 
+    // Render new arrivals
     arrivals.forEach(product => {
       const card = document.createElement('article');
       card.className = 'product-card';
@@ -79,11 +100,11 @@ fetch('../data/catalog.json')
         <button class="prod-btn" data-id="${product.id}" data-name="${product.name}" data-price="${product.price}" data-image="${product.image}">Add to Cart</button>
         </div>
       `;
+
       container.appendChild(card);
     });
   })
   .catch(console.error);
-
   document.addEventListener('click', (e) => {
   if (e.target.tagName === 'BUTTON' && e.target.textContent === 'Add to Cart') {
     const product = {
@@ -100,3 +121,6 @@ fetch('../data/catalog.json')
     alert(`${product.name} added to cart.`);
   }
 });
+
+
+

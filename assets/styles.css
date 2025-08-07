@@ -1,3 +1,84 @@
+/* --- Search Results Page Styles --- */
+
+.search-results {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: linear-gradient(135deg, #1c1c1c 60%, #d4af37 100%);
+  border-radius: 18px;
+  padding: 2.5rem 2.5rem 2rem 2.5rem;
+  box-shadow: 0 4px 32px rgba(212,175,55,0.15);
+}
+
+/* Search results title styling */
+.search-results h2 {
+  font-size: 2.2rem;
+  color: #ffd700;
+  margin-bottom: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px #1c1c1c44;
+}
+
+/* Style for each search result */
+.searchItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  background: #222;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem 1rem;
+  box-shadow: 0 2px 12px rgba(212,175,55,0.08);
+  transition: box-shadow 0.2s;
+}
+.searchItem:hover {
+  box-shadow: 0 4px 24px rgba(212,175,55,0.18);
+}
+
+.searchItem img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(212,175,55,0.12);
+  background: #fff;
+}
+.searchItem span {
+  display: block;
+  font-size: 1.1rem;
+  color: #ffd700;
+  margin-bottom: 0.5rem;
+}
+.searchItem strong {
+  font-size: 1.2rem;
+  color: #ffd700;
+  letter-spacing: 0.5px;
+}
+.searchItem small {
+  color: #e5c76b;
+  font-size: 0.98rem;
+
+}
+
+/* Button styling for each search item */
+.searchItem button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1.2rem;
+  background: #ffd700;
+  color: #222;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  box-shadow: 0 2px 8px rgba(212,175,55,0.10);
+}
+.searchItem button:hover {
+  background: #222;
+  color: #ffd700;
+  border: 1px solid #ffd700;
+}
  /* === Light Theme (default) === */
 :root {
   /* Base black */
@@ -5,7 +86,7 @@
   --bg-shimmer: #ffffff;
   --text: #111111;
   --primary: #1c1c1c;
-  --accent: royalblue;
+  --accent: skyblue;
   --muted: #777777;
   --card-bg: #ffffff;
   --section-bg: #f4f4f4;
@@ -42,6 +123,8 @@ body {
   background-blend-mode: screen;
   /* animation: shimmer 6s ease-in-out infinite; */
   color: #fff;
+  scroll-behavior: smooth;
+
 }
 
 
@@ -115,6 +198,11 @@ body.modal-open .page-content {
   background-color: rgb(51, 51, 51);
 }
 
+.nav a:active {
+  background-color: skyblue;
+  color: white;
+}
+
 .carter a {
   color: white;
   text-decoration: none;
@@ -138,16 +226,41 @@ body.modal-open .page-content {
   color: black !important; 
   border: none;
   padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  font-weight: 600;
-  transition: all 0.185s ease;
+  align-items: center;
+  position: relative;
 }
 
-.lbtn:hover {
-  background-color: #ecebeb; 
+/* Dropdown panel */
+.user-dropdown {
+  position: absolute;
+  top: 120%;                      /* just below the icon */
+  right: 0;
+  background:  rgba(255,255,255,0.2);
+  border: 1px solid var(--muted);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  min-width: 120px;
+  z-index: 1001;
 }
+
+/* Hide/show */
+.user-dropdown.hidden {
+  display: none;
+}
+
+/* Dropdown items */
+.user-dropdown a {
+  padding: 0.5rem 1rem;
+  color: white;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.user-dropdown a:hover {
+  background:  rgba(255,255,255,0.2);
+}
+
 
 .cart-icon {
   font-size: 23px;
@@ -156,7 +269,9 @@ body.modal-open .page-content {
 /* end of header */
 
 .hero {
-  /* full viewport height */
+  
+  /* Covers the full screen with a hero image and centers content both vertically and horizontally */
+
   height: 100vh;          
   width: 100%;  
   background: url('hero.jpg') no-repeat center/cover;  
@@ -197,9 +312,19 @@ body.modal-open .page-content {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
-.hero-content .btn {
+.btn {
   padding: .75rem 1.5rem;
   font-size: 1rem;
+  border: gold 1px solid;
+  border-radius: 4px;
+  background: rgba(212,175,55,0.4);
+  cursor: pointer;
+  color: var(--btn-text);
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: rgba(255,215,0,0.8);
 }
 .btn{
   background-color: #ecebeb;
@@ -230,6 +355,12 @@ body.modal-open .page-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1.5rem;
+}
+
+.product-grid img {
+  max-width: 100%;
+  border-radius: 8px;
+  max-height: 100px;
 }
 
 .product-card {
@@ -307,6 +438,13 @@ body.modal-open .page-content {
 }
 
 
+.catalog-preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .footer {
   bottom: 0;
   background: var(--primary);
@@ -316,13 +454,19 @@ body.modal-open .page-content {
   max-width: 100%;
   width: 100%;
   box-sizing: border-box;
+  margin-top: auto;
+}
+
+.page-content {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 
 
-/* Modal Styles 
-Test design by: YaqarHTML (He sucks at designing)
-Redesign is needed by Team CSS*/
+/* Styles for the modal layout and background */
+
 .modal {
   position: fixed;
   inset: 0;
@@ -367,6 +511,11 @@ Redesign is needed by Team CSS*/
 }
 
 @media (max-width: 768px) {
+    .header{
+        border: 2px solid black;
+        border-radius: 40px;
+    }
+
     .hero-image {
         height: 50vh;
     }
@@ -386,9 +535,11 @@ Redesign is needed by Team CSS*/
     }
 
     .header .logo {
-        font-size: 15px;
-        order: 1;
+        font-size: 25px;
+        order: 0;
+
     }
+
 
     .nav {
         display: none;
@@ -425,7 +576,7 @@ Redesign is needed by Team CSS*/
     }
 
     .cart {
-        order: 3;
+        order: 2;
     }
 
 }

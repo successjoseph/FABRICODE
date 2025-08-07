@@ -25,100 +25,120 @@
       "description": "Classic denim jacket for a cool look."
     }
   ],
-  "categories": [
-    "Tops",
-    "Bottoms",
-    "Accessories",
-    "Shoes"
-  ],
-  "goods": [
-    {
-      "Men": {
-        "Men Shoes": [
-          {
-            "id": 1,
-            "name": "Running Shoes",
-            "price": 79.99,
-            "description": "High-performance running shoes for athletes.",
-            "image": "assets/men_shoes_running.jpg"
-          }
-        ],
-        "Men Accessories": [
-          {
-            "id": 1,
-            "name": "Watch",
-            "price": 199.99,
-            "description": "A classic watch with a leather strap.",
-            "image": "assets/men_accessories_watch.jpg"
-          }
-        ],
-        "Men Clothing": [
-          {
-            "id": 1,
-            "name": "T-Shirt",
-            "price": 29.99,
-            "description": "A comfortable cotton t-shirt.",
-            "image": "assets/men_clothing_tshirt.jpg"
-          },
-          {
-            "id": 2,
-            "name": "Jeans",
-            "price": 49.99,
-            "description": "Stylish denim jeans.",
-            "image": "assets/men_clothing_jeans.jpg"
-          }
-        ]
+  "categories": {
+        "newarrivals": [
+        {
+        "id": 1,
+        "name": "Trendy Blazer",
+        "price": 45000,
+        "currency": "NGN",
+        "image": "../assets/images/trendyblazerimg.jpg",
+        "description": "A stylish and trendy blazer for all occasions."
+        },
+        {
+        "id": 2,
+        "name": "Casual Top",
+        "price": 25000,
+        "currency": "NGN",
+        "image": "../assets/images/casual-top.jpg",
+        "description": "A comfortable casual top for everyday wear."
+        },
+        {
+        "id": 3,
+        "name": "Denim Jacket",
+        "price": 30000,
+        "currency": "NGN",
+        "image": "../assets/images/denim-jacket.jpg",
+        "description": "Classic denim jacket for a cool look."
+        }
+    ],
+    "tops": [
+      {
+        "id": 4,
+        "name": "T-Shirt",
+        "price": 29900,
+        "currency": "NGN",
+        "image": "assets/men_clothing_tshirt.jpg",
+        "description": "A comfortable cotton t-shirt."
       },
-      "Women": {
-        "Women Shoes": [
-          {
-            "id": 1,
-            "name": "Sneakers",
-            "price": 59.99,
-            "description": "Comfortable sneakers for everyday wear.",
-            "image": "assets/women_shoes_sneakers.jpg"
-          },
-          {
-            "id": 2,
-            "name": "Boots",
-            "price": 89.99,
-            "description": "Stylish boots for the winter season.",
-            "image": "assets/women_shoes_boots.jpg"
-          }
-        ],
-        "Women Accessories": [
-          {
-            "id": 1,
-            "name": "Handbag",
-            "price": 89.99,
-            "description": "A stylish handbag for everyday use.",
-            "image": "assets/women_accessories_handbag.jpg"
-          },
-          {
-            "id": 2,
-            "name": "Scarf",
-            "price": 19.99,
-            "description": "A warm scarf for chilly days.",
-            "image": "assets/women_accessories_scarf.jpg"
-          }
-        ],
-        "Women Clothing": [
-          {
-            "id": 1,
-            "name": "Dress",
-            "price": 49.99,
-            "description": "A beautiful dress for special occasions.",
-            "image": "assets/women_clothing_dress.jpg"
-          },
-          {
-            "id": 2,
-            "name": "Blouse",
-            "price": 29.99,
-            "description": "A stylish blouse for everyday wear.",
-            "image": "assets/women_clothing_blouse.jpg"
-          }
-        ]
+      {
+        "id": 5,
+        "name": "Blouse",
+        "price": 29900,
+        "currency": "NGN",
+        "image": "assets/women_clothing_blouse.jpg",
+        "description": "A stylish blouse for everyday wear."
+      },
+      {
+        "id": 6,
+        "name": "Dress",
+        "price": 49900,
+        "currency": "NGN",
+        "image": "assets/women_clothing_dress.jpg",
+        "description": "A beautiful dress for special occasions."
       }
-    }
-  ]
+    ],
+    "bottoms": [
+      {
+        "id": 7,
+        "name": "Jeans",
+        "price": 49900,
+        "currency": "NGN",
+        "image": "assets/men_clothing_jeans.jpg",
+        "description": "Stylish denim jeans."
+      }
+    ],
+    "shoes": [
+      {
+        "id": 8,
+        "name": "Running Shoes",
+        "price": 79900,
+        "currency": "NGN",
+        "image": "assets/men_shoes_running.jpg",
+        "description": "High-performance running shoes for athletes."
+      },
+      {
+        "id": 9,
+        "name": "Sneakers",
+        "price": 59900,
+        "currency": "NGN",
+        "image": "assets/women_shoes_sneakers.jpg",
+        "description": "Comfortable sneakers for everyday wear."
+      },
+      {
+        "id": 10,
+        "name": "Boots",
+        "price": 89900,
+        "currency": "NGN",
+        "image": "assets/women_shoes_boots.jpg",
+        "description": "Stylish boots for the winter season."
+      }
+    ],
+    "accessories": [
+      {
+        "id": 11,
+        "name": "Watch",
+        "price": 199900,
+        "currency": "NGN",
+        "image": "assets/men_accessories_watch.jpg",
+        "description": "A classic watch with a leather strap."
+      },
+      {
+        "id": 12,
+        "name": "Handbag",
+        "price": 89900,
+        "currency": "NGN",
+        "image": "assets/women_accessories_handbag.jpg",
+        "description": "A stylish handbag for everyday use."
+      },
+      {
+        "id": 13,
+        "name": "Scarf",
+        "price": 19900,
+        "currency": "NGN",
+        "image": "assets/women_accessories_scarf.jpg",
+        "description": "A warm scarf for chilly days."
+      }
+    ]
+  }
 }
