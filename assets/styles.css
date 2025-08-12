@@ -192,12 +192,13 @@ body.modal-open .page-content {
 
 /* Nav links style */
 .nav a {
-  padding: 1rem;
+  padding: 0.7rem;
   color: white;
   text-align: left;
   border-bottom: 1px solid rgba(255,255,255,0.2);
-  border-top: 1px solid rgba(255,255,255,0.2);
   text-decoration: none;
+  border-radius: 7px;
+  transition: all 0.19s;
 }
 
 .nav a:hover{
@@ -213,13 +214,16 @@ body.modal-open .page-content {
   color: white;
   text-decoration: none;
   margin-left: 1rem;
+  
 }
 
 .carter {
   display: flex;
-  align-items: center;
-  position: relative;
+  vertical-align: middle;
+  text-align: center;
 }
+
+
 
 /* Dropdown panel */
 .user-dropdown {
@@ -265,7 +269,7 @@ body.modal-open .page-content {
 
   height: 100vh;          
   width: 100%;  
-  background: url('hero.png') no-repeat center/cover;  
+  background: url('hero.jpg') no-repeat center/cover;  
   display: flex;
   align-items: center;    
   justify-content: center;
@@ -291,6 +295,11 @@ body.modal-open .page-content {
 .hero-content h1 {
   margin: 0 0 .5rem;
   font-size: clamp(2rem, 5vw, 4rem);
+  text-decoration: none;
+}
+
+.h1t{
+  text-shadow: 0px 0px 5px #000000;
 }
 
 .hero-content p {
@@ -307,6 +316,8 @@ body.modal-open .page-content {
   cursor: pointer;
   color: var(--btn-text);
   text-decoration: none;
+  transition: all 0.3s;
+
 }
 
 .btn:hover {
@@ -318,6 +329,9 @@ body.modal-open .page-content {
   background: var(--light-gray);
 }
 
+.na{
+  text-align: center;
+}
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -335,10 +349,44 @@ body.modal-open .page-content {
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */
+  position: relative;overflow: hidden;}
+
+
+.prod-tag{
+  color: #000000;
+  font-size: 30px;
 }
 
-.categories {
+.prod-btn{
+  background-color: #fff;
+  padding: 9px 7px;
+  box-shadow: 0px 0px 6px rgb(0, 0, 0);
+  border: none;
+  font-size: 18px;
+}
+
+.img-cn{
+  position: absolute;
+  top: 170px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.img-pd{
+  width: 430px; 
+  height: 536px;
+  object-fit: cover; 
+  object-position: center; 
+  display: block;
+}
+
+.prod-tag{
+  color: #fff;
+}
+
+.categories{
   padding: 2rem;
 }
 
@@ -357,7 +405,9 @@ body.modal-open .page-content {
   text-align: center;
   border-radius: 8px;
   cursor: pointer;
+
 }
+
 
 .catalog-preview {
     display: flex;
@@ -421,6 +471,7 @@ body.modal-open .page-content {
   color: black;
   cursor: pointer;
 }
+
 
 
 /* Keyframes for laptop view */
